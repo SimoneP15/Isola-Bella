@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isola Bella - Riserva Naturale della Sicilia</title>
+    <link rel="stylesheet" href="stile.css">
+    <script>document.addEventListener("DOMContentLoaded", function() {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('header nav'); 
+  
+      
+      menuToggle.addEventListener('click', function() {
+          nav.classList.toggle('active'); 
+      });
+  });</script>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+  <header id="header_universale">
+    <div class="logo">
+      <img src="marchio.jpg" alt="Logo Isola Bella">
+    </div>
+  
+
+    <div class="site-name">
+      <a href="index.html"class="active"><strong>Isola Bella</strong></a>
+    </div>
+  
+
+    <nav>
+      <a href="index2.html">Museo</a>
+      <a href="index3.html">Riserva</a>
+      <a href="index4.html">Escursioni</a>
+      <a href="index5.html">Info & Tariffe</a>
+    </nav>
+ 
+    <button class="menu-toggle" aria-label="Apri menu">
+      &#9776; 
+    </button>
+</header>
+  
+     
+<section class="hero">
+  <div class="hero-image">
+    <img src="copertina home.jpg" alt="Isola Bella" class="hero-img" width="100%">
+  </div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Benvenuto a Isola Bella</h1>
+      <p>Scopri la bellezza naturale, storica e culturale di uno dei luoghi più affascinanti del Mediterraneo. Immergiti in un'esperienza unica.</p>
+    </div>
+  </div>
+</section>
+
+    <section id="isola-bella-sezione" class="isola-bella-sezione">
+      <div class="isola-bella-container">
+        <div class="isola-bella-layout">
+      
+          <section id="perla-del-mediterraneo" class="isola-bella-text-column">
+            <h2 class="isola-bella-title">La perla del Mediterraneo</h2>
+            <p>L'Isola Bella è spesso descritta come la "perla del Mediterraneo" per la sua straordinaria bellezza naturale. Questo piccolo angolo di paradiso è caratterizzato da acque cristalline, una flora rigogliosa e una fauna unica. La sua posizione privilegiata, a pochi passi dalla costa di Taormina, la rende una delle destinazioni più iconiche della Sicilia. Non è solo un luogo di bellezza naturale, ma anche di ricchezza storica, culturale e ambientale. Un angolo di paradiso che combina una flora rigogliosa, una fauna unica e una storia affascinante.</p>
+          </section>
+    
+
+<div class="isola-bella-image-grid">
+  <div class="isola-bella-image-item" data-aos="fade-up">
+    <img src="img.jpg" alt="Fauna dell'Isola Bella" class="isola-bella-image" onclick="openImage(this)">
+  </div>
+
+  <div class="isola-bella-image-item" data-aos="fade-up" data-aos-delay="100">
+    <img src="img2.jpg" alt="Flora dell'Isola Bella" class="isola-bella-image" onclick="openImage(this)">
+  </div>
+
+  <div class="isola-bella-image-item" data-aos="fade-up" data-aos-delay="200">
+    <img src="img3.jpg" alt="Vista dell'Isola Bella" class="isola-bella-image" onclick="openImage(this)" width="100%">
+  </div>
+</div>
+</div>
+
+
+<div id="isola-bella-lightbox" class="isola-bella-lightbox" onclick="closeImage()">
+<img id="isola-bella-lightbox-image" src="" alt="Immagine ingrandita">
+</div>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+  duration: 1000,
+  offset: 200,
+  once: true,
+});
+
+function openImage(imgElement) {
+  const lightbox = document.getElementById("isola-bella-lightbox");
+  const lightboxImage = document.getElementById("isola-bella-lightbox-image");
+  lightbox.style.display = "flex";
+  lightboxImage.src = imgElement.src;
+}
+
+function closeImage() {
+  const lightbox = document.getElementById("isola-bella-lightbox");
+  lightbox.style.display = "none";
+}
+</script>
+</section>
+
+
+
+<section id="divisore-intro" class="divisore-intro">
+  <div class="container">
+    <h2>Scopri Isola Bella</h2>
+  </div>
+</section>
+
+<section id="home-cards" class="home-cards">
+  <div class="container">
+      <div class="home-card-container">
+          <div class="home-card">
+              <a href="index2.html">
+                  <img src="icona museo.jpg" alt="Museo Isola Bella">
+                  <h3>Museo</h3>
+                  <p>Scopri la lunga e affascinante storia dell’Isola Bella, dalle origini alla sua importanza oggi</p>
+                  <span class="btn">Scopri di più</span>
+              </a>
+          </div>
+          <div class="home-card">
+              <a href="index3.html">
+                  <img src="icona riserva.jpg" alt="Riserva Naturale">
+                  <h3>Riserva</h3>
+                  <p>L’Isola Bella è una riserva naturale protetta. Scoprila e vieni a trovarci!</p>
+                  <span class="btn">Scopri di più</span>
+              </a>
+          </div>
+          <div class="home-card">
+              <a href="index4.html">
+                  <img src="icona escursioni.jpg" alt="Escursioni sull'Isola">
+                  <h3>Escursioni</h3>
+                  <p>Esplora l’isola con escursioni guidate in barca, trekking e altre attività!</p>
+                  <span class="btn">Scopri di più</span>
+              </a>
+          </div>
+          <div class="home-card">
+              <a href="index5.html">
+                  <img src="icona info&tariffe.jpg" alt="Info e Tariffe">
+                  <h3>Info & Tariffe</h3>
+                  <p>Informazioni utili per la visita, orari di apertura e tariffe per l’ingresso e le attività.</p>
+                  <span class="btn">Scopri di più</span>
+              </a>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section id="blog-social" class="blog-social">
+  <div class="container">
+   
+    <div class="blog-social-info">
+      <h2>Seguici sui social!</h2>
+      <p>Segui la nostra pagina ufficiale per scoprire notizie, eventi e curiosità sull'Isola Bella. Resta aggiornato sulle nostre attività attraverso i social media, con un focus speciale su Instagram!</p>
+      
+    
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+          <img src="facebook.jpg" alt="Facebook">
+        </a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="instagram-icon">
+          <img src="instagram.jpg" alt="Instagram">
+        </a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+          <img src="x.jpg" alt="Twitter">
+        </a>
+      </div>
+
+      
+      <div class="instagram-preview">
+        <h3>Il nostro marchio ufficiale!</h3>
+        <p>Sarà possibile acquistare anche le nostre bag ricordo.</p>
+        <div class="instagram-feed">
+          <div class="brand-placeholder">
+            <img src="marchio.jpg" alt="">
+          </div>
+          <img src="bag.jpg" alt="">
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+    <footer class="footer">
+        <div class="container">
+        
+            <div class="footer-info">
+                <img src="bandiera blu.jpg" alt="Logo del sito" class="footer-logo">
+              </div>
+       
+            <div class="footer-links">
+                <h4>Link utili</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index5.html">Contatti</a></li>
+                    <li><a href="index6.html">Fauna</a></li>
+                    <li><a href="index7.html">Flora</a></li>
+                    <li><a href="index8.html">Emergenze Floristiche</a></li>
+                    <li><a href="https://auroralagona.github.io/Isola_Bella_acquistobiglietti/">Acquista i biglietti</a></li>
+                </ul>
+            </div>
+    
+        
+            <div class="footer-contact">
+                <h4>Contattaci</h4>
+                <p><a href="mailto:info@isolabella.com">info@isolabella.com</a></p>
+                <p>+39 0942 628738</p>
+                <p>Via Nazionale - Strada Statale 114, Isola Bella, Taormina, Italia</p>
+            </div>
+    
+            
+     
+        <div class="footer-bottom">
+            <p>&copy; 2024 Isola Bella. Tutti i diritti riservati.</p>
+            <p><a href="index10.html">Privacy Policy</a> | <a href="index9.html">Termini e Condizioni</a></p>
+        </div>
+    </footer>
+  
+      
+</body>
+</html>

@@ -1,0 +1,3888 @@
+body {
+  font-family: 'DM Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+  
+header {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #06789d;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+
+header .logo {
+    display: block;
+    flex: 0;
+    margin: 0 auto;  
+}
+
+
+header .logo img {
+    height: 60px;
+}
+
+
+header .site-name {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    display: block;
+    text-align: left;
+    margin-left: 20px; 
+}
+
+
+header .site-name a {
+    font-family: 'DM Sans', sans-serif;
+    color: white;
+    text-decoration: none;  
+    font-size: 22px;
+    font-weight: bold;
+}
+
+header nav {
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    gap: 30px;
+    justify-content: flex-end;
+    flex: 2;
+}
+
+header nav a {
+    font-family: 'DM Sans', sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #FFD700;
+}
+
+header nav a.active {
+    color: #FFD700;
+    font-weight: bold;
+}
+
+
+header .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 20;
+        padding: 10px 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .logo {
+        display: block;
+        margin: 0 auto;  
+        text-align: center;  
+    }
+
+    header .logo img {
+        height: 50px;
+    }
+
+  
+    header .site-name {
+        font-size: 18px;
+        text-align: center;  
+        margin: 0;  
+    }
+
+    header .site-name a {
+        font-size: 18px;
+        text-align: center;
+    }
+
+   
+    header nav {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        background-color: #003366;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    header nav a {
+        font-size: 16px;
+        padding: 10px 0;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    header nav a:hover {
+        color: #FFD700;
+    }
+
+    header nav a.active {
+        color: #FFD700;
+    }
+
+    header nav.active {
+        display: flex;
+    }
+
+    header .menu-toggle {
+        display: block;
+        color: white;
+    }
+}
+
+
+  .isola-bella-sezione {
+    padding: 50px 20px;
+  }
+  
+  .isola-bella-image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .isola-bella-image-item img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+ 
+  [data-aos] {
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+
+  .isola-bella-lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .isola-bella-lightbox img {
+    max-width: 80%;
+    max-height: 80%;
+  }
+  
+  
+  .hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  
+  .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+  
+  .hero-text {
+    font-family: 'DM Sans', sans-serif;
+    max-width: 510px;
+    background: #3e6f5c;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: left;
+    color: #06789d;
+    position: absolute;
+    left: 10%; 
+    top: 40%;
+    transform: translateY(-40%);
+    opacity: 0;
+    animation: fadeInSlide 1.5s ease-out 0.5s forwards;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  @keyframes fadeInSlide {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .hero h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    color: #FFD700;
+  }
+  
+  .hero p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: white;
+  }
+  
+ 
+  @media screen and (max-width: 1024px) {
+    .hero h1 {
+      font-size: 48px;
+    }
+  
+    .hero p {
+      font-size: 18px;
+    }
+  
+    .hero-text {
+      max-width: 70%;
+      padding: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .hero {
+      height: 70vh;
+    }
+  
+    .hero h1 {
+      font-size: 36px;
+    }
+  
+    .hero p {
+      font-size: 16px;
+    }
+  
+    .hero-text {
+      padding: 20px;
+      max-width: 80%;  
+      left: 10%; 
+      top: 50%;
+      transform: translateY(-50%);  
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .hero {
+      height: 50vh;
+      background-size: cover;
+    }
+  
+    .hero h1 {
+      font-size: 24px;
+    }
+  
+    .hero p {
+      font-size: 14px;
+    }
+  
+    .hero-text {
+      padding: 15px;
+      max-width: 90%;  
+      left: 5%;  
+      top: 45%;
+      transform: translateY(-50%);  
+    }
+  }
+  
+  
+  *::before,
+  *::after {
+  box-sizing: border-box;
+  }
+  
+
+  .isola-bella-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+  
+  .isola-bella-sezione {
+    margin-top: 60px;
+  }
+  
+  .isola-bella-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  
+  .isola-bella-text-column {
+    font-family: 'DM Sans', sans-serif;
+    flex: 0 0 60%;
+    padding-right: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .isola-bella-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #007bff;
+    display: inline-block;
+  }
+  
+  .isola-bella-text-column p {
+    font-family: 'DM Sans', sans-serif;
+    text-align: left;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+ 
+  @media (max-width: 768px) {
+    .isola-bella-container {
+      padding: 20px; 
+    }
+  
+    .isola-bella-layout {
+      flex-direction: column; 
+      align-items: flex-start; 
+    }
+  
+    .isola-bella-text-column {
+      flex: 0 0 100%; 
+      padding-right: 0; 
+      text-align: left; 
+    }
+  
+    .isola-bella-title {
+      font-size: 28px; 
+      text-align: left; 
+      width: 100%; 
+    }
+  
+    .isola-bella-text-column p {
+      font-size: 14px; 
+      text-align: left;
+    }
+  
+    .isola-bella-decorative-column {
+      height: 200px; 
+    }
+  }
+  
+  
+  @media (max-width: 480px) {
+    .isola-bella-title {
+      font-size: 24px; 
+    }
+  
+    .isola-bella-text-column p {
+      font-size: 12px; 
+    }
+  }
+
+
+
+.isola-bella-image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+  margin-top: 40px;
+  justify-items: center; 
+}
+
+
+.isola-bella-image-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.isola-bella-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.isola-bella-image-item:hover img {
+  transform: scale(1.1);  
+}
+
+
+.isola-bella-lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.isola-bella-lightbox img {
+  max-width: 90%;
+  object-fit: contain;
+}
+
+.isola-bella-lightbox:after {
+  content: "×";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .isola-bella-image-grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .isola-bella-image-grid {
+    grid-template-columns: 1fr; 
+    gap: 15px; 
+    justify-items: center; 
+    margin-left: -10px; 
+  }
+
+  .isola-bella-image-item {
+    width: 100%; 
+  }
+}
+  
+***
+
+.home-cards {
+    padding: 60px 20px;
+    background-color: #f7f7f7;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+
+.home-card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; 
+}
+
+
+.home-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px; 
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    overflow: hidden;
+}
+
+
+.home-card img {
+    width: 100%;
+    height: 180px; 
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+
+.home-card h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.8rem;
+    margin: 15px 0; 
+    color: #2c3e50;
+}
+
+.home-card p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px; 
+}
+
+
+.home-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.home-card .btn {
+    display: inline-block;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #27ae60;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+
+.home-card .btn:hover {
+    background-color: #2ecc71;
+}
+
+
+.home-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+.home-card:hover img {
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 1024px) {
+    .home-card-container {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+    }
+    .home-card img {
+        height: 180px; 
+    }
+    .home-card h3 {
+        font-size: 1.6rem; 
+    }
+    .home-card p {
+        font-size: 0.95rem; 
+    }
+}
+
+
+@media (max-width: 768px) {
+    .home-card-container {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+
+    .home-cards {
+        padding: 40px 10px; 
+    }
+
+
+    .home-card {
+        height: auto;
+        width: 80%; 
+        margin: 0 auto; 
+    }
+
+   
+    .home-card img {
+        height: 250px; 
+        object-fit: cover; 
+    }
+
+    
+    .home-card h3 {
+        font-size: 1.5rem; 
+    }
+
+    .home-card p {
+        font-size: 0.95rem; 
+    }
+
+    .home-card .btn {
+        font-size: 0.9rem; 
+    }
+}
+  
+.divisore-intro {
+  font-family: 'DM Sans', sans-serif;
+  padding: 30px 20px; 
+  background: linear-gradient(135deg, #2E8B57, #06789d); 
+  color: white;
+  text-align: left;
+  margin-bottom: 20px; 
+  border-top: 2px solid #1c6b3b; 
+}
+  
+  .divisore-intro h2 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 600;
+  margin: 0;
+  padding-left: 40px; 
+  }
+  
+  .divisore-intro p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.0rem;
+  color: white;
+  margin-top: 10px;
+  line-height: 1.5;
+  padding-left: 40px; 
+  }
+  
+ 
+  @media (max-width: 768px) {
+  .divisore-intro h2 {
+    font-size: 2rem; 
+    padding-left: 20px; 
+  }
+  
+  .divisore-intro p {
+    font-size: 1rem; 
+    padding-left: 20px; 
+  }
+  }
+  
+ 
+  .blog-social {
+    font-family: 'DM Sans', sans-serif;
+    padding: 60px 20px;
+    background-color: #06789d;
+    color: #27ae60;
+    text-align: center;
+    margin-top: 60px;
+    border-top: 4px solid #fff;
+    border-bottom: 4px solid #fff;
+  }
+  
+  .blog-social h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .blog-social p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.2rem;
+    color: #fff;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    line-height: 1.5;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .social-icons a {
+    font-family: 'DM Sans', sans-serif;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .social-icons img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .social-icons a:hover img {
+    transform: scale(1.2);
+  }
+  
+  .instagram-icon {
+    border: 2px solid #fff;
+    padding: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .instagram-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .instagram-preview {
+    margin-top: 40px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .instagram-preview h3 {
+    font-size: 2rem;
+    color: #2E8B57;
+    margin-bottom: 20px;
+  }
+  
+  .instagram-preview p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+  }
+
+
+  .instagram-feed {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .instagram-feed img,
+  .instagram-feed .brand-placeholder {
+    width: 100px;  
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: none; 
+  }
+  
+ 
+  .instagram-feed .brand-placeholder {
+    background-color: #06789d;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+  }
+  
+  
+  .instagram-feed .brand-placeholder img {
+    width: 60px;  
+    height: 60px;
+    object-fit: contain; 
+  }
+  
+
+  @media (max-width: 768px) {
+    .instagram-feed {
+      justify-content: center;  
+      gap: 10px; 
+      flex-wrap: nowrap;  
+    }
+  
+    .instagram-feed img,
+    .instagram-feed .brand-placeholder {
+      width: 90px; 
+      height: 90px;  
+    }
+  
+    
+    .instagram-feed .brand-placeholder img {
+      width: 55px;  
+      height: 55px;
+    }
+  }
+  
+
+  @media (max-width: 768px) {
+    .blog-social h2 {
+      font-size: 2rem;
+    }
+  
+    .blog-social p {
+      font-size: 1rem;
+    }
+  
+    .social-icons {
+      gap: 20px;
+    }
+  
+    .social-icons a {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .instagram-preview h3 {
+      font-size: 1.6rem;
+    }
+  
+    .instagram-preview p {
+      font-size: 1rem;
+    }
+  
+  }
+  
+  .footer {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  .footer-info {
+    font-family: 'DM Sans', sans-serif;
+    flex: 1;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-info .footer-logo {
+    max-width: 150px; 
+    height: auto;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .footer-info .footer-logo {
+      max-width: 150px; 
+    }
+  }
+  
+  
+  .footer-links,
+  .footer-contact,
+  .footer-social {
+    flex: 1;
+    max-width: 300px;
+  }
+  
+  .footer-links h4,
+  .footer-contact h4,
+  .footer-social h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ff6f00;
+  }
+  
+  .footer-links ul {
+    font-family: 'DM Sans', sans-serif;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    font-family: 'DM Sans', sans-serif;
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a {
+    font-family: 'DM Sans', sans-serif;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: #ff6f00;
+  }
+  
+  .footer-contact a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-contact p {
+  color: #fff;
+  }
+  
+  .footer-contact a:hover {
+    color: #ff6f00;
+  }
+  
+
+  .footer-social .social-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center; 
+  }
+  
+  .footer-social .social-icons a {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .footer-social .social-icons img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  
+  .footer-social .social-icons a:hover img {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  
+  .footer-bottom {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #ddd;
+  }
+  
+  .footer-bottom p {
+    margin: 10px 0;
+    color: white;
+  }
+  
+  .footer-bottom a {
+    color: #ff6f00;
+    text-decoration: none;
+  }
+  
+  .footer-bottom a:hover {
+    text-decoration: underline;
+  }
+  
+
+  @media (max-width: 768px) {
+    .footer .container {
+        flex-direction: column;
+        text-align: left;
+    }
+  
+    .footer-info,
+    .footer-links,
+    .footer-contact,
+    .footer-social {
+        max-width: 100%;
+    }
+  
+    .footer-bottom {
+        text-align: center;
+    }
+  }
+  
+  
+  ********* /* seconda page */
+
+  •⁠  ⁠{
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+  }
+  
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+    width: 100%;
+    box-sizing: border-box; 
+  }
+
+
+  .hero-museo-show {
+    position: relative;
+    width: 100%;
+    min-height: 70vh;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    background-color: #FFA500;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-titolo-museo h2 {
+    font-family: 'DM Sans', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    color: #FFFFFF;
+    padding-left: 130px;
+}
+
+.hero-museo-show.show .hero-titolo-museo h2 {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .hero-museo-show {
+        min-height: 60vh;
+        justify-content: center;  
+    }
+
+    .hero-titolo-museo h2 {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 2rem;
+        position: absolute; 
+        padding-left: 130px;
+        margin: 0;
+        top: 50%; 
+        transform: translateY(-50%); 
+        text-align: left;  
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-museo-show {
+        min-height: 50vh;
+    }
+
+    .hero-titolo-museo h2 {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 1.5rem;
+        position: absolute;
+        padding-left: 130px;  
+        margin: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: left;
+    }
+}
+  
+
+  .museo-storia {
+      padding: 60px 20px;
+      background-color: #f9f9f9;
+      font-family: Helvetica, sans-serif;
+  }
+  
+  .contenitore-storia {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+      width: 100%;
+      box-sizing: border-box; 
+  }
+  
+
+  .titolo-storia {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 32px;
+      font-weight: bold;
+      text-align: left; 
+      margin-bottom: 20px;
+      color: #333; 
+  }
+  
+  .intro-storia {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.2rem;
+      color: #666;
+      margin-bottom: 40px;
+  }
+  
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.evento-storico {
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.evento-storico:hover {
+    transform: translateY(-10px);
+}
+
+.anno {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #FFA500;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.contenuto {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex: 1;
+    width: 100%;
+}
+
+.testo {
+  font-family: 'DM Sans', sans-serif;
+  flex: 1;
+  text-align: left;
+}
+
+.testo h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #FFA500;
+    margin-bottom: 10px;
+}
+
+.testo p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.immagine {
+    flex: 1;
+    max-width: 400px;
+}
+
+.immagine img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .timeline {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .evento-storico {
+        flex-direction: column;
+        padding: 20px;
+        position: relative;
+    }
+
+    .contenuto {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .anno {
+        font-size: 1.5rem;
+        padding: 10px 20px;
+        margin-bottom: 15px; 
+    }
+
+    .testo h3 {
+        font-size: 1.3rem;
+    }
+
+    .testo p {
+        font-size: 1rem;
+    }
+
+    .evento-storico {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titolo-storia {
+        font-size: 2rem;
+    }
+
+    .intro-storia {
+        font-size: 1rem;
+    }
+
+    .evento-storico {
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    .anno {
+        font-size: 1.3rem;
+        padding: 8px 16px;
+        margin-bottom: 10px; 
+    }
+
+    .testo h3 {
+        font-size: 1.1rem;
+    }
+
+    .testo p {
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .anno {
+        margin: 0; 
+        position: absolute;  
+        top: -40px;  
+        left: 50%;
+        transform: translateX(-50%);  
+    }
+}
+
+.divisore-arancio {
+    height: 4px;
+    background: linear-gradient(90deg, #FFA500, #FFB347);
+    margin: 60px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.divisore-azzurro {
+    height: 4px;
+    background: linear-gradient(to right, #2e6989, #2e6989);
+    border-radius: 10px;
+    position: relative;
+    margin: 60px 0;
+    overflow: hidden;
+    width: 100%;
+}
+  
+  .divisore-azzurro::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 0;
+      width: 100%;
+      height: 20px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.4),rgba(24, 24, 24, 0.4));
+      border-radius: 50%;
+      animation: onda 3s ease-in-out infinite;
+  }
+  
+  @keyframes onda {
+      0% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(10px);
+      }
+      100% {
+        transform: translateX(0);
+      }
+  }
+
+
+  .sezione-biglietti {
+    background-color: #114e62; 
+    color: white;
+    padding: 60px 20px; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.sezione-biglietti .contenitore-biglietti {
+    max-width: 1200px; 
+    width: 100%;
+    margin: 0 auto;
+}
+
+.titolo-biglietti {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.descrizione-biglietti {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    color: white;
+}
+
+
+.opzioni-biglietti {
+    font-family: 'DM Sans', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    gap: 40px; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    max-width: 1000px; 
+    margin: 0 auto; 
+}
+
+
+.biglietto {
+    background-color: white;
+    padding: 18px 20px; 
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-height: 300px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.biglietto:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+.biglietto h3 {
+    font-size: 22px; 
+    margin-bottom: 15px;
+    color: #127547; 
+}
+
+
+.prezzo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #127547;
+    margin-bottom: 15px;
+}
+
+
+.descrizione {
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: #333;
+    flex-grow: 1; 
+}
+
+
+.bottone-biglietto {
+    background-color: #127547; 
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.bottone-biglietto:hover {
+    background-color: #127547; 
+}
+
+
+@media (max-width: 768px) {
+    .titolo-biglietti {
+        font-size: 28px;
+    }
+
+    .descrizione-biglietti {
+        font-size: 16px;
+    }
+
+    .biglietto {
+        min-height: 270px; 
+    }
+
+    .prezzo {
+        font-size: 22px;
+    }
+
+    .bottone-biglietto {
+        padding: 10px 18px;
+        color: #FFA500;
+    }
+
+
+    .opzioni-biglietti {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .titolo-biglietti {
+        font-size: 24px;
+    }
+
+    .descrizione-biglietti {
+        font-size: 14px;
+    }
+
+    .biglietto {
+        min-height: 240px; 
+        width: 90%; 
+        margin: 10px auto; 
+    }
+
+    .prezzo {
+        font-size: 20px;
+    }
+
+    .bottone-biglietto {
+        padding: 8px 15px;
+    }
+
+    .opzioni-biglietti {
+        grid-template-columns: 1fr; 
+    }
+}
+
+.informazioni-utili {
+  background-color: #f9f9f9; 
+  padding: 40px 20px;
+  text-align: left; 
+}
+
+.informazioni-utili .contenitore-informazioni {
+  max-width: 800px; 
+  width: 100%;
+  margin: 0 auto; 
+  background-color: #fff; 
+  padding: 30px; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+
+.informazioni-utili h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #114e62; 
+  margin-bottom: 20px;
+}
+
+
+.informazioni-utili p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.informazioni-utili p strong {
+  font-weight: bold;
+}
+
+.informazioni-utili a {
+  color: #114e62; 
+  text-decoration: none;
+}
+
+.informazioni-utili a:hover {
+  text-decoration: underline; 
+}
+
+
+@media (max-width: 768px) {
+  .informazioni-utili h3 {
+      font-size: 22px; 
+  }
+
+  .informazioni-utili p {
+      font-size: 14px; 
+  }
+
+  .informazioni-utili .contenitore-informazioni {
+      padding: 20px; 
+      width: 90%; 
+      margin: 0 auto; 
+  }
+}
+
+
+@media (max-width: 480px) {
+  .informazioni-utili h3 {
+      font-size: 20px; 
+  }
+
+  .informazioni-utili p {
+      font-size: 13px; 
+  }
+
+  .informazioni-utili .contenitore-informazioni {
+      padding: 15px; 
+      width: 90%; 
+      margin: 0 auto; 
+  }
+}
+  
+  
+  ****** /* page riserva*/
+
+  •⁠  ⁠{
+    font-family: 'DM Sans', sans-serif;
+   }
+
+  •⁠  ⁠{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+  }
+  
+
+  .hero-riserva {
+    font-family: 'DM Sans', sans-serif;
+    position: relative;
+    width: 100%;
+    height: 60vh; 
+    min-height: 60vh; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 0;
+    padding: 0; 
+  }
+  
+  
+  .hero-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%); 
+    overflow: hidden; 
+  }
+  
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 2s ease-in-out; 
+  }
+  
+
+  .hero-riserva:hover .hero-image img {
+    transform: scale(1.1); 
+  }
+  
+
+  @media (max-width: 768px) {
+    .hero-riserva {
+      height: 80vh; 
+    }
+  }
+  
+
+  @media (min-width: 1024px) {
+    .hero-riserva {
+      height: 60vh; 
+    }
+  }
+  
+  #riserva-sezione {
+    background-color: #f5f5f5; 
+    padding: 40px 0; 
+  }
+  
+  .riserva-container {
+    width: 90%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+  }
+  
+  .riserva-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: center;
+  }
+  
+  .riserva-text-column {
+    font-family: 'DM Sans', sans-serif;
+    text-align: left; 
+    margin-top: 20px;
+  }
+  
+  .riserva-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 2.5rem; 
+    font-weight: bold;
+    color: #2c3e50; 
+    margin-bottom: 30px; 
+    line-height: 1.3;
+  }
+  
+  .riserva-text-column p {
+    font-size: 1.2rem; 
+    line-height: 1.6;
+    color: #0d0d0d; 
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 50px;  
+}
+
+@media (max-width: 768px) {
+    .riserva-title {
+        font-size: 2rem; 
+    }
+  
+    .riserva-text-column p {
+        font-size: 1rem; 
+        padding: 0 15px; 
+        margin-bottom: 30px;  
+    }
+  
+    #riserva-sezione {
+        padding: 30px 0; 
+    }
+  
+    .riserva-container {
+        width: 95%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .riserva-title {
+        font-size: 1.8rem; 
+    }
+  
+    .riserva-text-column p {
+        font-size: 0.95rem; 
+        margin-bottom: 25px;  
+    }
+}
+
+  .isola-bella-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+  
+
+  .isola-bella-sezione {
+    margin-top: 60px; 
+  }
+  
+
+  .isola-bella-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    flex-wrap: wrap; 
+    gap: 20px; 
+  }
+
+
+  .isola-bella-text-column {
+    font-family: 'DM Sans', sans-serif;
+    flex: 0 0 60%; 
+    padding-right: 20px;
+    margin-bottom: 30px;
+  }
+  
+  
+  .isola-bella-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #007bff; 
+    display: inline-block;
+  }
+  
+
+  .isola-bella-text-column p {
+    font-family: 'DM Sans', sans-serif;
+    text-align: left;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+
+  .isola-bella-decorative-column {
+    flex: 0 0 35%; 
+    background-color: #f0f0f0; 
+    border-radius: 8px;
+    height: 300px;
+    margin-bottom: 30px;
+  }
+  
+  
+  .escursioni-container {
+      text-align: center;
+      padding: 0 20px; 
+  }
+  
+  .divisore-riserva {
+    width: 100%; 
+    height: 10px; 
+    background-color: #f5f5f5; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+  }
+  
+  .divisore-riserva::before {
+    content: ""; 
+    width: 80%; 
+    height: 2px; 
+    background-color: #34495e; 
+  }
+  
+  .galleria {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+      gap: 20px; 
+      padding: 20px; 
+      justify-content: center; 
+  }
+  
+  
+  .galleria-item {
+      padding: 0 10px; 
+  }
+  
+  .galleria-item img {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 8px;
+  }
+  
+
+  .galleria-item img:hover {
+      transform: scale(1.05); 
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .modal {
+      display: none; 
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7); 
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+  }
+  
+  .modal-content {
+      max-width: 80%;
+      max-height: 80%;
+      margin: auto;
+      border-radius: 8px;
+  }
+  
+
+  .close {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+      cursor: pointer;
+  }
+  
+  .close:hover, .close:focus {
+      color: #ddd;
+      text-decoration: none;
+      cursor: pointer;
+  }
+  
+  
+  .biodiversita-card {
+      padding: 60px 20px; 
+      background-color: #f4f4f4; 
+      color: #333; 
+      text-align: left; 
+  }
+  
+  .container {
+      max-width: 1200px; 
+      margin: 0 auto; 
+      padding: 0 20px; 
+  }
+  
+  
+  .titolo-biodiversita {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 36px; 
+      font-weight: bold; 
+      color: #2E8B57; 
+      margin-bottom: 5px; 
+      text-transform: uppercase; 
+      letter-spacing: 1.5px; 
+      border-bottom: 2px solid #2E8B57; 
+      width: 200px;
+      padding-bottom: 10px; 
+  }
+  
+
+  .sottotitolo-biodiversita h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 20px; 
+      font-weight: 500; 
+      color: #555; 
+      margin-bottom: 20px; 
+  }
+  
+  
+
+  .descrizione-biodiversita {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px; 
+      line-height: 1.6; 
+      color: #555; 
+      max-width: 900px; 
+      margin-bottom: 20px; 
+  }
+  
+
+  @media (max-width: 768px) {
+      .titolo-biodiversita {
+          font-size: 28px; 
+      }
+  
+      .sottotitolo-biodiversita {
+          font-size: 18px; 
+      }
+  
+      .descrizione-biodiversita {
+          font-size: 16px; 
+      }
+  }
+  
+  @media (max-width: 480px) {
+      .titolo-biodiversita {
+          font-size: 24px; 
+      }
+  
+      .sottotitolo-biodiversita {
+          font-size: 16px; 
+      }
+  
+      .descrizione-biodiversita {
+          font-size: 14px; 
+      }
+  }
+  
+
+  .divisore-verde {
+      height: 4px;
+      background-color: #2E8B57; 
+      margin: 40px 0; 
+  }
+  
+  
+  #biodiversita-cards {
+      padding: 50px 20px;
+      background-color: #f9f9f9; 
+  }
+  
+  .container {
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+  
+  #biodiversita-cards {
+      padding: 50px 20px;
+      background-color: #f9f9f9; 
+  }
+  
+  .container {
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+  
+
+  .biodiversita-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+      gap: 30px; 
+      justify-items: center;
+  }
+  
+
+  .card {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden; 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      width: 100%;
+      max-width: 320px; 
+      text-decoration: none; 
+  }
+  
+  
+  .card:hover {
+      transform: translateY(-10px); 
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+  }
+  
+
+  .card-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover; 
+  }
+  
+  
+  .card-content {
+      padding: 20px;
+      text-align: center;
+  }
+  
+  .card h3 {
+      font-size: 24px;
+      color: #2E8B57; 
+      margin-bottom: 15px;
+  }
+  
+
+  .card:hover .card-content h3 {
+      color: #FF8C00; 
+  }
+  
+
+  @media (max-width: 768px) {
+      .card h3 {
+          font-size: 20px;
+      }
+  
+      .card-link {
+          font-size: 14px;
+      }
+  }
+  
+  **** /* page escursioni */
+
+  •⁠  ⁠{
+    font-family: 'DM Sans', sans-serif;
+   }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+    width: 100%;
+    box-sizing: border-box; 
+  }
+  
+  .hero-escursioni-show {
+    position: relative;
+    width: 100%;
+    min-height: 70vh; 
+    height: auto; 
+    overflow: hidden;
+    display: flex;
+    background-color: #0b2c40; 
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  .hero-titolo-escursioni h2 {
+    font-family: 'DM Sans', sans-serif;
+    position: absolute;
+    top: 50%; 
+    left: 0; 
+    transform: translateY(-50%); 
+    font-size: 2.5rem;
+    font-weight: bold;
+    opacity: 0; 
+    transition: opacity 1s ease-in-out; 
+    color: #FFFFFF; 
+    padding-left: 130px; 
+  }
+  
+  
+  .hero-escursioni-show.show .hero-titolo-escursioni h2 {
+    opacity: 1; 
+  }
+  
+  @media (max-width: 768px) {
+    .hero-escursioni-show {
+      min-height: 60vh; 
+    }
+    
+    .hero-titolo-escursioni h2 {
+      font-size: 2rem; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-escursioni-show {
+      min-height: 50vh; 
+    }
+    
+    .hero-titolo-escursioni h2 {
+      font-size: 1.5rem; 
+    }
+  }
+
+  .escursioni-isola-bella {
+      background-color: #f0f0f0; 
+      padding: 80px 20px; 
+      color: #333; 
+      font-family: 'DM Sans', sans-serif;
+  }
+
+  .escursioni-container {
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+      flex-wrap: wrap; 
+  }
+
+
+.divisore-tours {
+    background: linear-gradient(90deg, #FFA500, #FFB347); 
+    margin-bottom: 10px; 
+    width: 100%; 
+    height: 2px; 
+    margin: 30px 0; 
+}
+
+
+
+@media (max-width: 768px) {
+  
+
+    .divisore-tours {
+        margin-bottom: 15px; 
+        width: 100vw;
+        left: 0; 
+        position: relative; 
+    }
+}
+
+@media (max-width: 480px) {
+    .sezione-tours {
+        padding: 20px 15px; 
+    }
+
+    .divisore-tours {
+        margin-bottom: 15px; 
+        width: 100vw; 
+        left: 0; 
+        position: relative; 
+    }
+}
+
+  .escursioni-text {
+      max-width: 50%; 
+      padding-right: 20px; 
+      font-family: 'DM Sans', sans-serif;
+  }
+  
+  .escursioni-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 36px; 
+      font-weight: bold;
+      color: #e6ebef;
+      margin-bottom: 20px;
+  }
+  
+  .escursioni-description {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #555; 
+      margin-bottom: 30px;
+  }
+  
+  
+  .escursioni-image-container {
+      flex: 1; 
+      text-align: center; 
+  }
+  
+  .escursioni-img {
+      max-width: 100%; 
+      height: auto; 
+      border-radius: 8px; 
+  }
+  
+
+  @media (max-width: 768px) {
+      .escursioni-container {
+          flex-direction: column; 
+          text-align: center; 
+      }
+  
+      .escursioni-text {
+          max-width: 100%;
+          padding-right: 0;
+          margin-bottom: 20px; 
+      }
+  
+      .escursioni-img {
+          width: 80%; 
+      }
+  }
+  
+  @media (max-width: 480px) {
+      .escursioni-title {
+          font-size: 28px; 
+      }
+  
+      .escursioni-description {
+          font-size: 16px; 
+      }
+  
+      .escursioni-img {
+          width: 100%; 
+      }
+  }
+  
+  
+  .escursioni-isola-bella {
+      background-color: #ebd7c8; 
+      padding: 30px 10px; 
+      color: #333; 
+      font-family: 'DM Sans', sans-serif;
+  }
+  
+.escursioni-container {
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      max-width: 1000px;
+      margin: 0 auto;
+      flex-wrap: wrap; 
+  }
+
+.escursioni-text {
+      font-family: 'DM Sans', sans-serif;
+      max-width: 50%; 
+      padding-right: 20px; 
+  }
+  
+.escursioni-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 36px; 
+  font-weight: bold;
+  color: #2c3e50;
+   margin-bottom: 20px; 
+  }
+  
+.escursioni-description {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555; 
+  margin-bottom: 30px;
+  }
+  
+
+.escursioni-image-container {
+      flex: 1; 
+      text-align: center; 
+  }
+  
+.escursioni-img {
+      max-width: 100%; 
+      height: auto; 
+      border-radius: 8px; 
+  }
+
+  
+  @media (max-width: 768px) {
+      .escursioni-container {
+          flex-direction: column; 
+          text-align: center; 
+      }
+    }
+  
+      .escursioni-text {
+        font-family: 'DM Sans', sans-serif;
+        max-width: 100%; 
+        padding-right: 0;
+        margin-bottom: 20px; 
+      }
+  
+      .escursioni-img {
+          width: 80%; 
+  }
+  
+  @media (max-width: 480px) {
+      .escursioni-title {
+          font-size: 28px;
+
+        }
+  
+      .escursioni-description {
+          font-size: 16px; 
+      }
+  
+      .escursioni-img {
+          width: 100%; 
+      }
+  }
+  
+  .escursioni-percorsi {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+  }
+  
+
+  .escursioni-container {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 15px; 
+  }
+
+  .percorsi-cards {
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    justify-content: center; 
+    gap: 30px; 
+    flex-wrap: wrap; 
+    margin: 0 auto; 
+    width: 100%; 
+  }
+  
+
+  .percorsi-card {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%; 
+    max-width: 350px; 
+    text-align: left;
+    padding: 20px;
+    margin: 10px;
+    flex-shrink: 0; 
+  }
+  
+
+  .percorsi-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+
+  .percorsi-card-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #f4944a;
+    margin-bottom: 15px;
+  }
+
+  .percorsi-card-description {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+
+  .cta-btn:hover {
+    background-color: #e67e22;
+  }
+  
+
+  @media (max-width: 768px) {
+
+    .percorsi-cards {
+        justify-content: center;
+        gap: 15px; 
+    }
+
+    .percorsi-card {
+        width: 100%; 
+        max-width: 300px; 
+    }
+  }
+  
+
+  @media (max-width: 480px) {
+
+    .percorsi-title {
+        font-size: 30px;
+    }
+  
+    
+    .percorsi-description {
+        font-size: 16px;
+    }
+  
+  
+    .percorsi-card-title {
+        font-size: 20px;
+    }
+
+    .percorsi-card-description {
+        font-size: 14px;
+    }
+  
+   
+    .cta-btn {
+        font-size: 16px;
+    }
+  }
+  
+
+  @media (min-width: 1024px) {
+   
+    .percorsi-cards {
+        display: flex;
+        justify-content: center; 
+        gap: 30px; 
+        flex-wrap: nowrap; 
+        width: 100%; 
+    }
+  
+
+    .percorsi-card {
+        width: 350px; 
+    }
+  }
+  
+  .divisore-escursioni {
+    width: 100%; 
+    height: 10px; 
+    background-color:#f9f9f9; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+  }
+  
+  .divisore-escursioni::before {
+    content: ""; 
+    width: 80%; 
+    height: 2px; 
+    background-color: #f4944a; 
+  }
+  
+  .concept-isola-bella {
+      font-family: 'DM Sans', sans-serif;
+      background-color: #f9f9f9;
+      padding: 60px 20px;
+      color: #333;
+      font-family: 'Arial', sans-serif;
+  }
+  
+
+  .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+  }
+  
+
+  .section-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 36px;
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 20px;
+      text-align: left;
+  }
+  
+
+  .section-description {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 20px;
+      text-align: left;  
+      max-width: 800px;
+      margin-left: 0;
+  }
+  
+
+  @media (max-width: 768px) {
+      .section-title {
+          font-size: 28px;
+      }
+  
+      .section-description {
+          font-size: 16px;
+      }
+  }
+  
+  @media (max-width: 480px) {
+      .section-title {
+          font-size: 24px;
+      }
+  
+      .section-description {
+          font-size: 14px;
+      }
+  }
+  
+  .escursioni-info-utili {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #f4944a;  
+    padding: 60px 20px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+.escursioni-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.info-title {
+  font-family: 'DM Sans', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+
+.info-box {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-list {
+    font-family: 'DM Sans', sans-serif;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.info-list li {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.info-list li strong {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+
+.email-link {
+    font-family: 'DM Sans', sans-serif;
+    color: #FFA500;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.email-link:hover {
+    color: #FFD700;
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .info-title {
+        font-size: 28px;
+    }
+
+    .info-list li {
+        font-size: 16px;
+    }
+
+    .info-box {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-title {
+        font-size: 24px;
+    }
+
+    .info-list li {
+        font-size: 14px;
+    }
+
+    .info-box {
+        padding: 15px;
+    }
+}
+  
+  ****** /* page info&tariffe */
+
+  •⁠  ⁠{
+    font-family: 'DM Sans', sans-serif;
+   }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+    width: 100%;
+    box-sizing: border-box; 
+  }
+  
+  .hero-info-tariffe-show {
+    font-family: 'DM Sans', sans-serif;
+    position: relative;
+    width: 100%;
+    min-height: 70vh; 
+    height: auto; 
+    overflow: hidden;
+    display: flex;
+    background-color: #c4dde0; 
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  .hero-titolo-info-tariffe h2 {
+    font-family: 'DM Sans', sans-serif;
+    position: absolute;
+    top: 50%; 
+    left: 0; 
+    transform: translateY(-50%); 
+    font-size: 2.5rem;
+    font-weight: bold;
+    opacity: 0; 
+    transition: opacity 1s ease-in-out; 
+    color: #2c3e50; 
+    padding-left: 130px; 
+  }
+  
+ 
+  .hero-info-tariffe-show.show .hero-titolo-info-tariffe h2 {
+    opacity: 1; 
+  }
+  
+  @media (max-width: 768px) {
+    .hero-info-tariffe-show {
+      min-height: 60vh; 
+    }
+    
+    .hero-titolo-info-tariffe h2 {
+      font-size: 2rem; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-info-tariffe-show {
+      min-height: 50vh; 
+    }
+    
+    .hero-titolo-info-tariffe h2 {
+      font-size: 1.5rem; 
+    }
+  }
+  
+
+  .info-tariffe-divider {
+    width: 100%; 
+    height: 2px; 
+    background-color: #8bb4b8; 
+    margin: 30px 0; 
+  }
+  
+
+  .arrivo-contenuto {
+    font-family: 'DM Sans', sans-serif;
+    max-width: 1000px;
+    margin: 0 auto; 
+    text-align: left;
+  }
+  
+  
+  .arrivo-section h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  .arrivo-section p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  
+  .arrivo-opzioni {
+    font-family: 'DM Sans', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center; 
+  }
+  
+  .arrivo-opzione {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #fffbfb;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  
+  .arrivo-opzione h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #8bb4b8;
+  }
+  
+  .arrivo-opzione p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    color: #555;
+  }
+  
+
+  .tariffe-section {
+    font-family: 'DM Sans', sans-serif;
+    padding: 40px 20px;
+    background-color: white;
+  }
+  
+  .tariffe-contenuto {
+    font-family: 'DM Sans', sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .tariffe-section h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color:  #8bb4b8;
+  }
+  
+  .tariffe-section p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  
+  .tariffe-opzioni {
+    font-family: 'DM Sans', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center; 
+  }
+  
+  .tariffe-opzione {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  
+  .tariffe-opzione h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+  
+  .tariffe-opzione p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .tariffe-opzione strong {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+  }
+  
+ 
+  @media (min-width: 1024px) {
+  
+
+    .arrivo-contenuto, .tariffe-contenuto {
+      margin-bottom: 60px;
+    }
+  
+  
+    .arrivo-opzioni, .tariffe-opzioni {
+      gap: 30px; 
+    }
+    
+   
+    .arrivo-opzione, .tariffe-opzione {
+      width: 90%;
+    }
+  
+
+    .arrivo-section, .tariffe-section {
+      margin-bottom: 50px; 
+    }
+  }
+  
+
+  .contatti-section {
+    font-family: 'DM Sans', sans-serif;
+    padding: 40px 20px;
+    background-color: #b8dcdf;
+  }
+  
+  .contatti-contenuto {
+    font-family: 'DM Sans', sans-serif;
+    max-width: 1000px;
+    margin: 0 auto; 
+    text-align: left;
+  }
+  
+  .contatti-section h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .contatti-box {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  
+  .contatti-box h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  
+  .contatti-box p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .contatti-box a {
+    font-family: 'DM Sans', sans-serif;
+    color: #8bb4b8;
+    text-decoration: none;
+  }
+  
+  .contatti-box a:hover {
+    font-family: 'DM Sans', sans-serif;
+    text-decoration: underline;
+  }
+  
+ 
+  @media (max-width: 1024px) {
+    .arrivo-opzioni, .tariffe-opzioni {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    }
+  
+    .arrivo-opzione, .tariffe-opzione {
+      padding: 15px;
+      width: 100%;
+    }
+  
+    .contatti-box {
+      margin-bottom: 30px;
+    }
+  
+    .arrivo-section h2, .tariffe-section h2, .contatti-section h2 {
+      font-size: 24px; 
+    }
+  
+    .arrivo-section p, .tariffe-section p, .contatti-section p {
+      font-size: 16px; 
+    }
+  
+    .arrivo-opzione h3, .tariffe-opzione h3, .contatti-box h3 {
+      font-size: 20px; 
+    }
+  }
+  
+
+  @media (max-width: 768px) {
+    .arrivo-contenuto, .tariffe-contenuto, .contatti-contenuto {
+      padding: 0 15px; 
+      max-width: 90%;
+      margin: 0 auto; 
+    }
+  
+    .arrivo-opzioni, .tariffe-opzioni {
+      grid-template-columns: 1fr; 
+    }
+  
+    .arrivo-opzione, .tariffe-opzione {
+      padding: 15px;
+      width: 100%; 
+    }
+  
+    .contatti-box {
+      width: 100%;
+      margin: 0 auto;
+      padding: 15px; 
+      margin-bottom: 20px; 
+    }
+  
+    .arrivo-section h2, .tariffe-section h2, .contatti-section h2 {
+      font-size: 22px; 
+    }
+  
+    .arrivo-section p, .tariffe-section p, .contatti-section p {
+      font-size: 14px; 
+    }
+  
+    .arrivo-opzione h3, .tariffe-opzione h3, .contatti-box h3 {
+      font-size: 18px; 
+    }
+  }
+ 
+  @media (max-width: 480px) {
+    .arrivo-contenuto, .tariffe-contenuto, .contatti-contenuto {
+      padding: 0 10px; 
+      max-width: 90%; 
+      margin: 0 auto; 
+    }
+  
+    .arrivo-section h2, .tariffe-section h2, .contatti-section h2 {
+      font-size: 20px; 
+    }
+    .arrivo-section p, .tariffe-section p, .contatti-section p {
+      font-size: 12px; 
+    }
+  
+    .arrivo-opzione h3, .tariffe-opzione h3, .contatti-box h3 {
+      font-size: 16px;
+    }
+  
+    .arrivo-opzione, .tariffe-opzione {
+      padding: 12px; 
+    }
+  
+    .contatti-box {
+      padding: 12px; 
+    }
+  }
+  
+
+  .divider-info-tariffe {
+    border: none;
+    border-top: 1px solid #8bb4b8; 
+    margin: 20px 0; 
+    width: 100%;
+  }
+  
+  ****** 
+  
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  •⁠  ⁠{
+    font-family: 'DM Sans', sans-serif;
+   }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+  }
+  
+
+  .fauna-header {
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #2e8b57;
+    color: white;
+  }
+  
+  .fauna-logo img {
+    height: 50px;
+  }
+  
+  .fauna-nav a {
+    font-family: 'DM Sans', sans-serif;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 18px;
+  }
+  
+  .fauna-nav a:hover {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #1f6e42;
+  }
+  
+
+  .fauna-main {
+    font-family: 'DM Sans', sans-serif;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+ 
+  .fauna-sezione-introduzione {
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 80px; 
+  }
+  
+
+  .fauna-titolo-introduzione h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 36px;
+    margin: 0;
+    text-align: left; 
+}
+
+@media (max-width: 768px) {
+    .fauna-titolo-introduzione h1 {
+        text-align: left !important; 
+    }
+}
+
+  
+  .fauna-paragrafo-introduzione {
+    font-family: 'DM Sans', sans-serif;
+    max-width: 50%; 
+  }
+  
+  .fauna-paragrafo-introduzione p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+    margin: 0;
+  }
+  
+ 
+  .fauna-divider {
+    width: 100%;
+    height: 2px;
+    background-color: #00b3b3; 
+    margin: 40px 0;
+  }
+  
+  
+  .fauna-sezione-specie {
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+  }
+  
+  .fauna-card-specie {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+  }
+  
+  .fauna-card-specie img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;  
+  }
+ 
+  .lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);  
+    display: none;  
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;  
+  }
+  
+  .lightbox-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    object-fit: contain; 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);  
+  }
+  
+
+  .lightbox-overlay:before {
+    content: '×';
+    font-size: 3rem;
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1100; 
+  }
+  
+
+  .fauna-sezione-avvertenze {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .fauna-sezione-avvertenze h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .fauna-sezione-avvertenze p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    color: #555;
+  }
+  
+
+  .fauna-collegamenti {
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .fauna-collegamento {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #2e8b57;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .fauna-collegamento:hover {
+    background-color: #1f6e42;
+  }
+  
+  
+  @media (max-width: 768px) {
+   
+    .fauna-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .fauna-nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+  
+
+    .fauna-main {
+      padding: 20px;
+    }
+  
+ 
+    .fauna-sezione-introduzione {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-top: 80px; 
+    }
+  
+    .fauna-titolo-introduzione h1 {
+      font-size: 28px;
+    }
+  
+    .fauna-paragrafo-introduzione {
+      max-width: 90%; 
+    }
+  
+    .fauna-paragrafo-introduzione p {
+      font-size: 16px;
+    }
+  
+
+    .fauna-divider {
+      margin: 30px 0;
+    }
+  
+   
+    .fauna-sezione-specie {
+      grid-template-columns: 1fr; 
+      gap: 20px;
+      justify-items: center; 
+    }
+  
+    .fauna-card-specie {
+      width: 85%; 
+      max-width: 350px; 
+      padding: 15px;
+    }
+  
+    .fauna-card-specie img {
+      max-height: 200px; 
+    }
+  
+
+    .fauna-sezione-avvertenze {
+      padding: 15px;
+    }
+  
+   
+    .fauna-collegamenti {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .fauna-collegamento {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  }
+  
+  
+  @media (max-width: 480px) {
+    .fauna-titolo-introduzione h1 {
+      font-size: 24px;
+    }
+  
+    .fauna-paragrafo-introduzione p {
+      font-size: 14px;
+    }
+  
+    .fauna-card-specie h3 {
+      font-size: 20px;
+    }
+  
+    .fauna-card-specie p {
+      font-size: 14px;
+    }
+  }
+  
+  
+  *****
+
+  •⁠  ⁠{
+    font-family: 'DM Sans', sans-serif;
+   }
+  
+  .hero-emergenze {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #4db8b0; 
+    padding: 120px 20px; 
+    text-align: left;
+    color: white;
+    position: relative;
+  }
+  
+  .contenuto-hero {
+    font-family: 'DM Sans', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+  }
+  
+  .testo-hero {
+    font-family: 'DM Sans', sans-serif;
+    padding: 20px;
+    max-width: 800px; 
+  }
+  
+  .testo-hero h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 60px; 
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: lowercase;
+    letter-spacing: 2px;
+  }
+  
+  .testo-hero p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 22px;
+    line-height: 1.6;
+    color: white;
+  }
+  
+ 
+  .introduzione-emergenze {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #f1f1f1; 
+    padding: 50px 20px;
+    color: #333;
+  }
+  
+  .introduzione-emergenze .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .introduzione-emergenze h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  .introduzione-contenuto {
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .introduzione-contenuto p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    max-width: 700px;
+  }
+  
+  .introduzione-immagine {
+    width: 40%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+
+  .divider {
+    width: 100%;
+    height: 2px;
+    background-color: #4db8b0;
+    margin: 40px 0;
+  }
+  
+  .principali-emergenze {
+    padding: 50px 20px;
+    background-color: #e6f7f7; 
+  }
+  
+  .principali-emergenze h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #2c3e50;
+  }
+  
+  
+  .emergenza-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px; 
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .emergenza-contenuto {
+    width: 55%; 
+  }
+  
+  .emergenza-item h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #2c3e50;
+  }
+  
+  .emergenza-item p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+  }
+  
+  .emergenza-immagine {
+    width: 40%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .introduzione-emergenze {
+    font-family: 'DM Sans', sans-serif;
+    padding: 50px 20px;
+    margin-top: 120px; 
+    color: #333;
+  }
+  
+
+  @media (max-width: 768px) {
+    .introduzione-emergenze {
+      margin-top: 150px; 
+      padding: 50px 20px;
+    }
+  
+    .introduzione-emergenze h2 {
+      font-size: 28px;
+    }
+  
+    .introduzione-contenuto p {
+      font-size: 18px; 
+    }
+  }
+  
+  
+  .navigazione-flora-fauna {
+    font-family: 'DM Sans', sans-serif;
+    padding: 40px;
+    background-color: #eaf7ff;
+    border-radius: 10px;
+    margin-top: 30px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+ 
+  .contenuto-navigazione {
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+ 
+  .collegamento {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #0056b3; 
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 40px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  
+  .icon {
+    font-size: 22px;
+  }
+  
+
+  .collegamento:hover {
+    background-color: #ff5733; 
+    transform: scale(1.05); 
+  }
+
+  @media (max-width: 768px) {
+    .contenuto-navigazione {
+      flex-direction: column; 
+      gap: 20px;
+    }
+  
+    .collegamento {
+      font-size: 16px;
+      padding: 15px 30px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .collegamento {
+      font-size: 14px;
+      padding: 12px 25px; 
+    }
+  }
+  
+    
+  ****** /* Termini e condizioni / Policy della privacy*/
+  
+  •⁠  ⁠{
+    font-family: 'DM Sans', sans-serif;
+   }
+
+  #header-termini {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #114e62; 
+    padding: 30px 0;
+    color: white;
+    text-align: center;
+  }
+  
+  #header-termini h1 {
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    font-size: 36px;
+  }
+  
+
+  #main-termini {
+    padding: 40px 20px;
+  }
+  
+
+  .section-termini {
+    font-family: 'DM Sans', sans-serif;
+    margin-bottom: 40px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title-termini {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    color: #114e62; 
+    margin-bottom: 10px;
+  }
+  
+  .section-termini p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .section-termini ul {
+    font-family: 'DM Sans', sans-serif;
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+  
+  .section-termini a {
+    font-family: 'DM Sans', sans-serif;
+    color: #27ae60;
+    text-decoration: none;
+  }
+  
+  .section-termini a:hover {
+    text-decoration: underline;
+  }
+  
+
+  #footer-termini {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #114e62;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  #footer-termini p {
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    font-size: 14px;
+    color: white;
+  }
+  
+  
+  @media (max-width: 1024px) {
+    #header-termini h1 {
+        font-size: 30px;
+    }
+  
+    .section-termini {
+        padding: 18px;
+    }
+  
+    .title-termini {
+        font-size: 22px;
+    }
+  
+    .section-termini p {
+        font-size: 15px;
+    }
+  
+    
+    #main-termini {
+      padding-top: 100px; 
+    }
+  }
+  
+
+  @media (max-width: 768px) {
+    #header-termini h1 {
+        font-size: 26px;
+    }
+  
+    .section-termini {
+        padding: 15px;
+    }
+  
+    .title-termini {
+        font-size: 20px;
+    }
+  
+    .section-termini p {
+        font-size: 14px;
+    }
+  
+    .section-termini ul {
+        padding-left: 15px;
+    }
+  
+    #footer-termini p {
+        font-size: 12px;
+    }
+  
+
+    #main-termini {
+      padding-top: 120px; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+  
+    #header-termini h1 {
+        font-size: 22px;
+    }
+  
+    .section-termini {
+        padding: 12px;
+    }
+  
+    .title-termini {
+        font-size: 18px;
+    }
+  
+    .section-termini p {
+        font-size: 13px;
+    }
+  
+    .section-termini ul {
+        padding-left: 10px;
+    }
+  
+    #footer-termini p {
+        font-size: 10px;
+    }
+  
+   
+    #main-termini {
+      padding-top: 140px; 
+    }
+  }
+  
+  ***
+  
+  •⁠  ⁠{
+    font-family: 'DM Sans', sans-serif;
+   }
+ 
+  #header-privacy {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #114e62; 
+    padding: 30px 0;
+    color: white;
+    text-align: center;
+  }
+  
+  #header-privacy h1 {
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    font-size: 36px;
+  }
+  
+
+  #main-privacy {
+    padding: 40px 20px;
+  }
+  
+  .section-privacy {
+    font-family: 'DM Sans', sans-serif;
+    margin-bottom: 40px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section-privacy h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    color: #114e62; 
+    margin-bottom: 10px;
+  }
+  
+  .title-privacy {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    color: #114e62; 
+    margin-bottom: 10px;
+  }
+  
+  .section-privacy p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .section-privacy ul {
+    font-family: 'DM Sans', sans-serif;
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+  
+  .section-privacy a {
+    font-family: 'DM Sans', sans-serif;
+    color: #27ae60; 
+    text-decoration: none;
+  }
+  
+  .section-privacy a:hover {
+    text-decoration: underline;
+  }
+  
+
+  #footer-privacy {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #114e62;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  #footer-privacy p {
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    font-size: 14px;
+    color: white;
+  }
+  
+  
+  @media (max-width: 1024px) {
+    #header-privacy h1 {
+        font-size: 30px;
+    }
+  
+    .section-privacy {
+        padding: 18px;
+    }
+  
+    .title-privacy {
+        font-size: 22px;
+    }
+  
+    .section-privacy p {
+        font-size: 15px;
+    }
+  }
+  
+
+  @media (max-width: 768px) {
+    #header-privacy h1 {
+        font-size: 26px;
+    }
+  
+    .section-privacy {
+        padding: 15px;
+    }
+  
+    .title-privacy {
+        font-size: 20px;
+    }
+  
+    .section-privacy p {
+        font-size: 14px;
+    }
+  
+    .section-privacy ul {
+        padding-left: 15px;
+    }
+  
+    #footer-privacy p {
+        font-size: 12px;
+    }
+  
+  
+    #section-introduzione-privacy {
+      margin-top: 100px; 
+    }
+  }
+  
+
+  @media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+  
+    #header-privacy h1 {
+        font-size: 22px;
+    }
+  
+    .section-privacy {
+        padding: 12px;
+    }
+  
+    .title-privacy {
+        font-size: 18px;
+    }
+  
+    .section-privacy p {
+        font-size: 13px;
+    }
+  
+    .section-privacy ul {
+        padding-left: 10px;
+    }
+  
+    #footer-privacy p {
+        font-size: 10px;
+    }
+  
+   
+    #section-introduzione-privacy {
+      margin-top: 120px; 
+    }
+  }
+

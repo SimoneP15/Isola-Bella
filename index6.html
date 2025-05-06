@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isola Bella - Riserva Naturale della Sicilia</title>
+    <link rel="stylesheet" href="stile.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+ 
+  <header id="header_universale">
+    <div class="logo">
+      <img src="marchio.jpg" alt="Logo Isola Bella">
+    </div>
+  
+
+    <div class="site-name">
+      <a href="index.html"class="active"><strong>Isola Bella</strong></a>
+    </div>
+  
+
+    <nav>
+      <a href="index2.html">Museo</a>
+      <a href="index3.html">Riserva</a>
+      <a href="index4.html">Escursioni</a>
+      <a href="index5.html">Info & Tariffe</a>
+    </nav>
+ 
+    <button class="menu-toggle" aria-label="Apri menu">
+      &#9776; 
+    </button>
+</header>
+
+    <div class="fauna-divider"></div>
+
+    <main class="fauna-main">
+        <section class="fauna-sezione-introduzione">
+            <div class="fauna-titolo-introduzione">
+                <h1>Fauna</h1>
+            </div>
+            <div class="fauna-paragrafo-introduzione">
+                <p>La fauna dell'Isola Bella è un insieme variegato di specie che si sono adattate perfettamente all'ambiente dell'isola. Tra le più rappresentative troviamo il gabbiano reale, la testuggine mediterranea e il coniglio selvatico. Ogni specie ha un ruolo fondamentale nell'ecosistema dell'isola, contribuendo alla sua biodiversità e alla sua bellezza unica.</p>
+            </div>
+        </section>
+    
+        <div class="fauna-divider"></div>
+    
+
+        <section class="fauna-sezione-specie">
+            <div class="fauna-card-specie">
+                <img src="gabbiano.jpg" alt="">
+                <h3>Il Gabbiano Reale</h3>
+                <p>Il gabbiano reale è una specie comune nella Riserva. Si può osservare spesso mentre vola sopra le acque cristalline dell'isola.</p>
+            </div>
+            <div class="fauna-card-specie">
+               <img src="testuggine.jpg" alt="">
+                <h3>La Testuggine Mediterranea</h3>
+                <p>La testuggine mediterranea, simbolo di longevità, si trova spesso nelle zone più tranquille dell'isola, dove si nutre di piante marine.</p>
+            </div>
+            <div class="fauna-card-specie">
+              <img src="coniglio.jpg" alt="">
+                <h3>Il Coniglio Selvatico</h3>
+                <p>Il coniglio selvatico è una specie che popola le aree boscose dell'isola. È molto difficile da avvistare, ma la sua presenza è un segno di un ecosistema sano.</p>
+            </div>
+        </section>
+    
+   
+        <section class="fauna-sezione-avvertenze">
+            <h2>Avvertenze Importanti</h2>
+            <p>Per la salvaguardia dell'ambiente, si prega di non disturbare la fauna locale. Rispettate la natura e mantenete le distanze dalle specie protette.</p>
+        </section>
+    </main>
+
+
+<section class="fauna-collegamenti">
+    <a href="index7.html" class="fauna-collegamento">Vai alla Flora</a>
+    <a href="index8.html" class="fauna-collegamento">Vai alle Emergenze Floristiche</a>
+</section>
+<div class="fauna-divider"></div>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+  
+      <div class="footer-info">
+          <img src="bandiera blu.jpg" alt="Logo del sito" class="footer-logo">
+        </div>
+ 
+      <div class="footer-links">
+          <h4>Link utili</h4>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index5.html">Contatti</a></li>
+              <li><a href="index6.html">Fauna</a></li>
+              <li><a href="index7.html">Flora</a></li>
+              <li><a href="index8.html">Emergenze Floristiche</a></li>
+              <li><a href="https://auroralagona.github.io/Isola_Bella_acquistobiglietti/">Acquista i biglietti</a></li>
+          </ul>
+      </div>
+
+  
+      <div class="footer-contact">
+          <h4>Contattaci</h4>
+          <p><a href="mailto:info@isolabella.com">info@isolabella.com</a></p>
+          <p>+39 0942 628738</p>
+          <p>Via Nazionale - Strada Statale 114, Isola Bella, Taormina, Italia</p>
+      </div>
+
+      
+
+  <div class="footer-bottom">
+      <p>&copy; 2024 Isola Bella. Tutti i diritti riservati.</p>
+      <p><a href="index10.html">Privacy Policy</a> | <a href="index9.html">Termini e Condizioni</a></p>
+  </div>
+</footer>
+
+<script>document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('header nav'); 
+
+   
+    menuToggle.addEventListener('click', function() {
+        nav.classList.toggle('active'); 
+    });
+});</script>
+
+<script>
+   
+    const images = document.querySelectorAll('.fauna-card-specie img');
+    const lightbox = document.querySelector('.lightbox-overlay');
+    const lightboxImage = document.getElementById('lightbox-image');
+    
+    
+    images.forEach(image => {
+      image.addEventListener('click', () => {
+       lightboxImage.src = image.src;
+        lightbox.classList.add('active');
+      });
+    });
+    
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox || e.target === lightbox.querySelector('before')) {
+        lightbox.classList.remove('active');
+      }
+    });
+  </script>
+
+</body>
+</html>
