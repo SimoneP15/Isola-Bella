@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isola Bella - Riserva Naturale della Sicilia</title>
     <link rel="stylesheet" href="stile.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -13,7 +13,7 @@
  
   <header id="header_universale">
     <div class="logo">
-      <a href="index.html"><img src="marchio.jpg" alt="Logo Isola Bella"></a>
+      <img src="marchio.jpg" alt="Logo Isola Bella">
     </div>
   
 
@@ -24,7 +24,7 @@
 
     <nav>
       <a href="index2.html">Museo</a>
-      <a href="index3.html" class="active-sub">Riserva</a>
+      <a href="index3.html">Riserva</a>
       <a href="index4.html">Escursioni</a>
       <a href="index5.html">Info & Tariffe</a>
     </nav>
@@ -34,12 +34,7 @@
     </button>
 </header>
 
-<section class="hero-universale">
-  <img src="gabbiano.jpg" alt="Fauna dell'Isola Bella" class="hero-universale-img">
-  <div class="hero-universale-content">
-    <h1>Fauna</h1>
-  </div>
-</section>
+    <div class="fauna-divider"></div>
 
     <main class="fauna-main">
         <section class="fauna-sezione-introduzione">
@@ -110,7 +105,7 @@
   
       <div class="footer-contact">
           <h4>Contattaci</h4>
-          <p><a href="/cdn-cgi/l/email-protection#c8a1a6aea788a1bba7a4a9aaada4a4a9e6aba7a5"><span class="__cf_email__" data-cfemail="264f484049664f55494a4744434a4a470845494b">[email&#160;protected]</span></a></p>
+          <p><a href="mailto:info@isolabella.com">info@isolabella.com</a></p>
           <p>+39 0942 628738</p>
           <p>Via Nazionale - Strada Statale 114, Isola Bella, Taormina, Italia</p>
       </div>
@@ -144,4 +139,16 @@
       image.addEventListener('click', () => {
        lightboxImage.src = image.src;
         lightbox.classList.add('active');
-   
+      });
+    });
+    
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox || e.target === lightbox.querySelector('before')) {
+        lightbox.classList.remove('active');
+      }
+    });
+  </script>
+
+</body>
+</html>

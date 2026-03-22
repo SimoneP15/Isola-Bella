@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isola Bella - Riserva Naturale della Sicilia</title>
     <link rel="stylesheet" href="stile.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
    
   
     <header id="header_universale">
         <div class="logo">
-          <a href="index.html"><img src="marchio.jpg" alt="Logo Isola Bella"></a>
+          <img src="marchio.jpg" alt="Logo Isola Bella">
         </div>
       
     
@@ -23,7 +23,7 @@
     
         <nav>
           <a href="index2.html">Museo</a>
-          <a href="index3.html" class="active-sub">Riserva</a>
+          <a href="index3.html">Riserva</a>
           <a href="index4.html">Escursioni</a>
           <a href="index5.html">Info & Tariffe</a>
         </nav>
@@ -34,15 +34,8 @@
     </header>
       
 
-<section class="hero-universale">
-  <img src="parassiti.jpg" alt="Emergenze Floristiche" class="hero-universale-img">
-  <div class="hero-universale-content">
-    <h1>Emergenze Floristiche</h1>
-  </div>
-</section>
-
 <main class="emergenze-floristiche">
-  <section id="introduzione-emergenze" class="introduzione-emergenze introduzione-emergenze--no-top">
+  <section id="introduzione-emergenze" class="introduzione-emergenze">
       <div class="container">
           <h2>Emergenze Floristiche</h2>
           <div class="introduzione-contenuto">
@@ -117,7 +110,7 @@
     
         <div class="footer-contact">
             <h4>Contattaci</h4>
-            <p><a href="/cdn-cgi/l/email-protection#cda4a3aba28da4bea2a1acafa8a1a1ace3aea2a0"><span class="__cf_email__" data-cfemail="11787f777e5178627e7d7073747d7d703f727e7c">[email&#160;protected]</span></a></p>
+            <p><a href="mailto:info@isolabella.com">info@isolabella.com</a></p>
             <p>+39 0942 628738</p>
             <p>Via Nazionale - Strada Statale 114, Isola Bella, Taormina, Italia</p>
         </div>
@@ -129,14 +122,15 @@
         <p><a href="index10.html">Privacy Policy</a> | <a href="index9.html">Termini e Condizioni</a></p>
     </div>
 </footer>
+
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const nav = document.querySelector("header nav");
-    menuToggle.addEventListener("click", function() {
-        nav.classList.toggle("active");
-    });
-});
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('#header_universale nav'); 
+  
+  menuToggle.addEventListener('click', function() {
+    nav.classList.toggle('active'); 
+  });
 </script>
+
 </body>
 </html>

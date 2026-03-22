@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isola Bella - Riserva Naturale della Sicilia</title>
     <link rel="stylesheet" href="stile.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <body>
 
 
 
     <header id="header_universale">
         <div class="logo">
-          <a href="index.html"><img src="marchio.jpg" alt="Logo Isola Bella"></a>
+          <img src="marchio.jpg" alt="Logo Isola Bella">
         </div>
       
     
@@ -36,14 +36,14 @@
 
 <main>
 
-<section class="hero-universale">
-  <img src="Isola-Bella-Taormina-Sicilia--1920x1280.webp" alt="Info e Tariffe" class="hero-universale-img">
-  <div class="hero-universale-content">
-    <h1>Info &amp; Tariffe</h1>
-  </div>
-</section>
+    <div class="hero-info-tariffe-show">
+        <section class="hero-titolo-info-tariffe">
+          <h2>Info & Tariffe</h2>
+        </section>
+      </div>
       
 
+<div class="info-tariffe-divider"></div> 
 
     <section class="arrivo-section">
         <div class="arrivo-contenuto">
@@ -103,7 +103,7 @@
          
             <div class="contatti-box">
                 <h3>Isola Bella - Riserva Naturale</h3>
-                <p><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#452c2b232a05372c36203733242c362a292427202929246b262a28"><span class="__cf_email__" data-cfemail="adc4dec2c1cccfc8c1c1cc83dfc4dec8dfdbccedcac0ccc4c183c4d9">[email&#160;protected]</span></a></p>
+                <p><strong>Email:</strong> <a href="mailto:info@riservaisolabella.com">isolabella.riserva@gmail.it</a></p>
                 <p><strong>Cellulare:</strong> +39 3286729451</p>
                 <p><strong>Indirizzo:</strong> Via Nazionale, Isola Bella, 98039 Taormina (ME), Italia</p>
                 <p><strong>Orari di apertura:</strong></p>
@@ -114,7 +114,7 @@
            
             <div class="contatti-box">
                 <h3>Isola Bella - Museo</h3>
-                <p><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#a6cbd3d5c3c9e6cfd5c9cac7c4c3cacac788c5c9cb"><span class="__cf_email__" data-cfemail="0a637965666b686f66666b24677f796f654a6d676b636624637e">[email&#160;protected]</span></a></p>
+                <p><strong>Email:</strong> <a href="mailto:museo@isolabella.com">isolabella.museo@gmail.it</a></p>
                 <p><strong>Telefono:</strong> 0957952356</p>
                 <p><strong>Cellulare:</strong> +39 3485672329</p>
                 <p><strong>Indirizzo:</strong> Via Nazionale, Isola Bella, 98039 Taormina (ME), Italia</p>
@@ -149,7 +149,7 @@
     
         <div class="footer-contact">
             <h4>Contattaci</h4>
-            <p><a href="/cdn-cgi/l/email-protection#422b2c242d022b312d2e2320272e2e236c212d2f"><span class="__cf_email__" data-cfemail="a1c8cfc7cee1c8d2cecdc0c3c4cdcdc08fc2cecc">[email&#160;protected]</span></a></p>
+            <p><a href="mailto:info@isolabella.com">info@isolabella.com</a></p>
             <p>+39 0942 628738</p>
             <p>Via Nazionale - Strada Statale 114, Isola Bella, Taormina, Italia</p>
         </div>
@@ -161,14 +161,22 @@
         <p><a href="index10.html">Privacy Policy</a> | <a href="index9.html">Termini e Condizioni</a></p>
     </div>
 </footer>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const nav = document.querySelector("header nav");
-    menuToggle.addEventListener("click", function() {
-        nav.classList.toggle("active");
+
+<script>document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('header nav'); 
+
+ 
+    menuToggle.addEventListener('click', function() {
+        nav.classList.toggle('active'); 
     });
-});
-</script>
+});</script>
+
+<script>
+    window.addEventListener('load', function() {
+      document.querySelector('.hero-info-tariffe-show').classList.add('show');
+    });
+  </script>
+
 </body>
 </html>

@@ -1,45 +1,12 @@
-/* ===== FONT FACE ===== */
-@font-face {
-  font-family: 'DMSerifDisplay';
-  src: url('DMSerifDisplay-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'HelveticaNeue';
-  src: url('HelveticaNeueRoman.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* ===== FONT STACK VARIABLES ===== */
-:root {
-  /* Titoli: DM Serif Display con fallback serif di sistema */
-  --font-heading: 'DMSerifDisplay', 'Georgia', 'Times New Roman', serif;
-  /* Testi: Helvetica Neue con fallback sans-serif di sistema */
-  --font-body: 'HelveticaNeue', 'Helvetica Neue', 'Arial', system-ui, -apple-system, sans-serif;
-}
-
-/* Tutti i titoli usano DM Serif Display */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-}
-
-/* Tutti i testi usano Helvetica Neue */
-body, p, a, li, span, input, button, label, td, th {
-  font-family: var(--font-body);
-}
-
 body {
+  font-family: 'DM Sans', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   }
   
 header {
+    font-family: 'DM Sans', sans-serif;
     background-color: #06789d;
     color: white;
     padding: 20px 40px;
@@ -64,7 +31,7 @@ header .logo img {
 
 
 header .site-name {
-    font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 22px;
     font-weight: bold;
     color: white;
@@ -75,7 +42,7 @@ header .site-name {
 
 
 header .site-name a {
-    font-family: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'DM Sans', sans-serif;
     color: white;
     text-decoration: none;  
     font-size: 22px;
@@ -83,6 +50,7 @@ header .site-name a {
 }
 
 header nav {
+    font-family: 'DM Sans', sans-serif;
     display: flex;
     gap: 30px;
     justify-content: flex-end;
@@ -90,6 +58,7 @@ header nav {
 }
 
 header nav a {
+    font-family: 'DM Sans', sans-serif;
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -120,22 +89,20 @@ header .menu-toggle {
 
 @media screen and (max-width: 768px) {
     header {
-        position: relative;
+        position: absolute;
         top: 0;
         left: 0;
         right: 0;
         z-index: 20;
         padding: 10px 20px;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-between;
     }
 
     header .logo {
         display: block;
-        margin: 0;
-        text-align: left;
+        margin: 0 auto;  
+        text-align: center;  
     }
 
     header .logo img {
@@ -145,29 +112,28 @@ header .menu-toggle {
   
     header .site-name {
         font-size: 18px;
-        text-align: left;
-        margin: 0;
-        flex: 1;
-        padding-left: 10px;
+        text-align: center;  
+        margin: 0;  
     }
 
     header .site-name a {
         font-size: 18px;
-        text-align: left;
+        text-align: center;
     }
 
    
     header nav {
         display: none;
         flex-direction: column;
-        gap: 0;
+        gap: 10px;
         width: 100%;
         background-color: #003366;
-        position: static;
-        padding: 6px 0 10px;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        padding: 10px 0;
         text-align: center;
-        order: 10;
-        flex-basis: 100%;
     }
 
     header nav a {
@@ -272,6 +238,7 @@ header .menu-toggle {
   }
   
   .hero-text {
+    font-family: 'DM Sans', sans-serif;
     max-width: 510px;
     background: #3e6f5c;
     padding: 30px;
@@ -299,6 +266,7 @@ header .menu-toggle {
   }
   
   .hero h1 {
+    font-family: 'DM Sans', sans-serif;
     font-size: 56px;
     font-weight: 700;
     margin-bottom: 20px;
@@ -307,6 +275,7 @@ header .menu-toggle {
   }
   
   .hero p {
+    font-family: 'DM Sans', sans-serif;
     font-size: 20px;
     line-height: 1.6;
     margin-bottom: 30px;
@@ -379,102 +348,7 @@ header .menu-toggle {
   *::after {
   box-sizing: border-box;
   }
-
-  /* ===== HERO UNIVERSALE ===== */
-  .hero-universale {
-    position: relative;
-    width: 100%;
-    height: 70vh;
-    overflow: hidden;
-  }
-
-  .hero-universale-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-  }
-
-  .hero-universale-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding: 0 60px 50px;
-    background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.1) 60%, transparent 100%);
-    box-sizing: border-box;
-  }
-
-  .hero-universale-content h1 {
-    font-size: 52px;
-    font-weight: 700;
-    color: #ffffff;
-    margin: 0 0 10px 0;
-    letter-spacing: 1px;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
-  }
-
-  .hero-universale-content p {
-    font-size: 18px;
-    color: #f0f0f0;
-    margin: 0;
-    max-width: 560px;
-    text-shadow: 0 1px 4px rgba(0,0,0,0.4);
-  }
-
-  @media (max-width: 768px) {
-    .hero-universale {
-      height: 45vh;
-    }
-    .hero-universale-content {
-      padding: 0 30px 30px;
-    }
-    .hero-universale-content h1 {
-      font-size: 34px;
-    }
-    .hero-universale-content p {
-      font-size: 15px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .hero-universale {
-      height: 35vh;
-    }
-    .hero-universale-content h1 {
-      font-size: 26px;
-    }
-  }
-
-  .introduzione-emergenze--no-top {
-    margin-top: 0 !important;
-  }
-
-  /* ===== NAV: SOTTOSEZIONE RISERVA ===== */
-  header nav a.active-sub {
-    color: #7ee8a2;
-    font-weight: bold;
-    border-bottom: 2px solid #7ee8a2;
-    padding-bottom: 2px;
-  }
-
-  header nav a.active-sub:hover {
-    color: #7ee8a2;
-  }
-
-  /* Logo cliccabile */
-  header .logo a {
-    display: block;
-    line-height: 0;
-  }
-
-
+  
 
   .isola-bella-container {
     width: 90%;
@@ -498,12 +372,14 @@ header .menu-toggle {
   
   
   .isola-bella-text-column {
+    font-family: 'DM Sans', sans-serif;
     flex: 0 0 60%;
     padding-right: 20px;
     margin-bottom: 30px;
   }
   
   .isola-bella-title {
+    font-family: 'DM Sans', sans-serif;
     font-size: 32px;
     font-weight: 700;
     color: #2c3e50;
@@ -514,6 +390,7 @@ header .menu-toggle {
   }
   
   .isola-bella-text-column p {
+    font-family: 'DM Sans', sans-serif;
     text-align: left;
     line-height: 1.6;
     font-size: 16px;
@@ -689,12 +566,14 @@ header .menu-toggle {
 
 
 .home-card h3 {
+    font-family: 'DM Sans', sans-serif;
     font-size: 1.8rem;
     margin: 15px 0; 
     color: #2c3e50;
 }
 
 .home-card p {
+    font-family: 'DM Sans', sans-serif;
     font-size: 1rem;
     color: #555;
     margin-bottom: 15px; 
@@ -791,6 +670,7 @@ header .menu-toggle {
 }
   
 .divisore-intro {
+  font-family: 'DM Sans', sans-serif;
   padding: 30px 20px; 
   background: linear-gradient(135deg, #2E8B57, #06789d); 
   color: white;
@@ -800,6 +680,7 @@ header .menu-toggle {
 }
   
   .divisore-intro h2 {
+  font-family: 'DM Sans', sans-serif;
   font-size: 2.5rem;
   color: white;
   font-weight: 600;
@@ -808,6 +689,7 @@ header .menu-toggle {
   }
   
   .divisore-intro p {
+  font-family: 'DM Sans', sans-serif;
   font-size: 1.0rem;
   color: white;
   margin-top: 10px;
@@ -830,6 +712,7 @@ header .menu-toggle {
   
  
   .blog-social {
+    font-family: 'DM Sans', sans-serif;
     padding: 60px 20px;
     background-color: #06789d;
     color: #27ae60;
@@ -840,12 +723,14 @@ header .menu-toggle {
   }
   
   .blog-social h2 {
+    font-family: 'DM Sans', sans-serif;
     font-size: 2.5rem;
     color: #fff;
     margin-bottom: 20px;
   }
   
   .blog-social p {
+    font-family: 'DM Sans', sans-serif;
     font-size: 1.2rem;
     color: #fff;
     max-width: 900px;
@@ -861,6 +746,7 @@ header .menu-toggle {
   }
   
   .social-icons a {
+    font-family: 'DM Sans', sans-serif;
     display: inline-block;
     width: 50px;
     height: 50px;
@@ -1001,6 +887,7 @@ header .menu-toggle {
   }
   
   .footer {
+    font-family: 'DM Sans', sans-serif;
     background-color: #333;
     color: #fff;
     padding: 40px 20px;
@@ -1017,6 +904,7 @@ header .menu-toggle {
   }
   
   .footer-info {
+    font-family: 'DM Sans', sans-serif;
     flex: 1;
     max-width: 300px;
     display: flex;
@@ -1053,15 +941,18 @@ header .menu-toggle {
   }
   
   .footer-links ul {
+    font-family: 'DM Sans', sans-serif;
     list-style-type: none;
     padding: 0;
   }
   
   .footer-links ul li {
+    font-family: 'DM Sans', sans-serif;
     margin-bottom: 10px;
   }
   
   .footer-links a {
+    font-family: 'DM Sans', sans-serif;
     color: #fff;
     text-decoration: none;
     transition: color 0.3s;
@@ -1155,6 +1046,7 @@ header .menu-toggle {
   ********* /* seconda page */
 
   •⁠  ⁠{
+    font-family: 'DM Sans', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
@@ -1185,6 +1077,7 @@ header .menu-toggle {
 }
 
 .hero-titolo-museo h2 {
+    font-family: 'DM Sans', sans-serif;
     position: absolute;
     top: 50%;
     left: 0;
@@ -1208,6 +1101,7 @@ header .menu-toggle {
     }
 
     .hero-titolo-museo h2 {
+        font-family: 'DM Sans', sans-serif;
         font-size: 2rem;
         position: absolute; 
         padding-left: 130px;
@@ -1224,6 +1118,7 @@ header .menu-toggle {
     }
 
     .hero-titolo-museo h2 {
+        font-family: 'DM Sans', sans-serif;
         font-size: 1.5rem;
         position: absolute;
         padding-left: 130px;  
@@ -1238,7 +1133,7 @@ header .menu-toggle {
   .museo-storia {
       padding: 60px 20px;
       background-color: #f9f9f9;
-      font-family: var(--font-body);
+      font-family: Helvetica, sans-serif;
   }
   
   .contenitore-storia {
@@ -1251,6 +1146,7 @@ header .menu-toggle {
   
 
   .titolo-storia {
+      font-family: 'DM Sans', sans-serif;
       font-size: 32px;
       font-weight: bold;
       text-align: left; 
@@ -1259,6 +1155,7 @@ header .menu-toggle {
   }
   
   .intro-storia {
+      font-family: 'DM Sans', sans-serif;
       font-size: 1.2rem;
       color: #666;
       margin-bottom: 40px;
@@ -1271,6 +1168,7 @@ header .menu-toggle {
 }
 
 .evento-storico {
+    font-family: 'DM Sans', sans-serif;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1289,6 +1187,7 @@ header .menu-toggle {
 }
 
 .anno {
+    font-family: 'DM Sans', sans-serif;
     background-color: #FFA500;
     color: #fff;
     font-size: 2rem;
@@ -1312,11 +1211,13 @@ header .menu-toggle {
 }
 
 .testo {
+  font-family: 'DM Sans', sans-serif;
   flex: 1;
   text-align: left;
 }
 
 .testo h3 {
+    font-family: 'DM Sans', sans-serif;
     font-size: 1.3rem;
     font-weight: bold;
     color: #FFA500;
@@ -1324,6 +1225,7 @@ header .menu-toggle {
 }
 
 .testo p {
+    font-family: 'DM Sans', sans-serif;
     font-size: 1.2rem;
     color: #555;
 }
@@ -1480,6 +1382,7 @@ header .menu-toggle {
 }
 
 .titolo-biglietti {
+    font-family: 'DM Sans', sans-serif;
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -1487,6 +1390,7 @@ header .menu-toggle {
 }
 
 .descrizione-biglietti {
+    font-family: 'DM Sans', sans-serif;
     font-size: 18px;
     margin-bottom: 40px;
     line-height: 1.6;
@@ -1495,6 +1399,7 @@ header .menu-toggle {
 
 
 .opzioni-biglietti {
+    font-family: 'DM Sans', sans-serif;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
     gap: 40px; 
@@ -1705,6 +1610,7 @@ header .menu-toggle {
   ****** /* page riserva*/
 
   •⁠  ⁠{
+    font-family: 'DM Sans', sans-serif;
    }
 
   •⁠  ⁠{
@@ -1715,6 +1621,7 @@ header .menu-toggle {
   
 
   .hero-riserva {
+    font-family: 'DM Sans', sans-serif;
     position: relative;
     width: 100%;
     height: 60vh; 
@@ -1783,11 +1690,13 @@ header .menu-toggle {
   }
   
   .riserva-text-column {
+    font-family: 'DM Sans', sans-serif;
     text-align: left; 
     margin-top: 20px;
   }
   
   .riserva-title {
+    font-family: 'DM Sans', sans-serif;
     font-size: 2.5rem; 
     font-weight: bold;
     color: #2c3e50; 
@@ -1859,6 +1768,7 @@ header .menu-toggle {
 
 
   .isola-bella-text-column {
+    font-family: 'DM Sans', sans-serif;
     flex: 0 0 60%; 
     padding-right: 20px;
     margin-bottom: 30px;
@@ -1866,6 +1776,7 @@ header .menu-toggle {
   
   
   .isola-bella-title {
+    font-family: 'DM Sans', sans-serif;
     font-size: 32px;
     font-weight: 700;
     color: #2c3e50;
@@ -1877,6 +1788,7 @@ header .menu-toggle {
   
 
   .isola-bella-text-column p {
+    font-family: 'DM Sans', sans-serif;
     text-align: left;
     line-height: 1.6;
     font-size: 16px;
@@ -1997,6 +1909,7 @@ header .menu-toggle {
   
   
   .titolo-biodiversita {
+      font-family: 'DM Sans', sans-serif;
       font-size: 36px; 
       font-weight: bold; 
       color: #2E8B57; 
@@ -2010,6 +1923,7 @@ header .menu-toggle {
   
 
   .sottotitolo-biodiversita h3 {
+      font-family: 'DM Sans', sans-serif;
       font-size: 20px; 
       font-weight: 500; 
       color: #555; 
@@ -2019,6 +1933,7 @@ header .menu-toggle {
   
 
   .descrizione-biodiversita {
+      font-family: 'DM Sans', sans-serif;
       font-size: 18px; 
       line-height: 1.6; 
       color: #555; 
@@ -2147,6 +2062,7 @@ header .menu-toggle {
   **** /* page escursioni */
 
   •⁠  ⁠{
+    font-family: 'DM Sans', sans-serif;
    }
   
   html, body {
@@ -2173,6 +2089,7 @@ header .menu-toggle {
   
 
   .hero-titolo-escursioni h2 {
+    font-family: 'DM Sans', sans-serif;
     position: absolute;
     top: 50%; 
     left: 0; 
@@ -2214,6 +2131,7 @@ header .menu-toggle {
       background-color: #f0f0f0; 
       padding: 80px 20px; 
       color: #333; 
+      font-family: 'DM Sans', sans-serif;
   }
 
   .escursioni-container {
@@ -2263,9 +2181,11 @@ header .menu-toggle {
   .escursioni-text {
       max-width: 50%; 
       padding-right: 20px; 
+      font-family: 'DM Sans', sans-serif;
   }
   
   .escursioni-title {
+      font-family: 'DM Sans', sans-serif;
       font-size: 36px; 
       font-weight: bold;
       color: #e6ebef;
@@ -2273,6 +2193,7 @@ header .menu-toggle {
   }
   
   .escursioni-description {
+      font-family: 'DM Sans', sans-serif;
       font-size: 18px;
       line-height: 1.6;
       color: #555; 
@@ -2328,6 +2249,7 @@ header .menu-toggle {
       background-color: #ebd7c8; 
       padding: 30px 10px; 
       color: #333; 
+      font-family: 'DM Sans', sans-serif;
   }
   
 .escursioni-container {
@@ -2340,11 +2262,13 @@ header .menu-toggle {
   }
 
 .escursioni-text {
+      font-family: 'DM Sans', sans-serif;
       max-width: 50%; 
       padding-right: 20px; 
   }
   
 .escursioni-title {
+  font-family: 'DM Sans', sans-serif;
   font-size: 36px; 
   font-weight: bold;
   color: #2c3e50;
@@ -2352,6 +2276,7 @@ header .menu-toggle {
   }
   
 .escursioni-description {
+  font-family: 'DM Sans', sans-serif;
   font-size: 18px;
   line-height: 1.6;
   color: #555; 
@@ -2379,6 +2304,7 @@ header .menu-toggle {
     }
   
       .escursioni-text {
+        font-family: 'DM Sans', sans-serif;
         max-width: 100%; 
         padding-right: 0;
         margin-bottom: 20px; 
@@ -2404,10 +2330,11 @@ header .menu-toggle {
   }
   
   .escursioni-percorsi {
+    font-family: 'DM Sans', sans-serif;
     background-color: #f9f9f9;
     padding: 60px 20px;
     color: #333;
-    font-family: var(--font-body);
+    font-family: 'Arial', sans-serif;
     text-align: center;
   }
   
@@ -2419,6 +2346,7 @@ header .menu-toggle {
   }
 
   .percorsi-cards {
+    font-family: 'DM Sans', sans-serif;
     display: flex;
     justify-content: center; 
     gap: 30px; 
@@ -2429,6 +2357,7 @@ header .menu-toggle {
   
 
   .percorsi-card {
+    font-family: 'DM Sans', sans-serif;
     background-color: #fff;
     border-radius: 8px;
     overflow: hidden;
@@ -2452,6 +2381,7 @@ header .menu-toggle {
   
 
   .percorsi-card-title {
+    font-family: 'DM Sans', sans-serif;
     font-size: 22px;
     font-weight: bold;
     color: #f4944a;
@@ -2459,6 +2389,7 @@ header .menu-toggle {
   }
 
   .percorsi-card-description {
+    font-family: 'DM Sans', sans-serif;
     font-size: 16px;
     line-height: 1.6;
     color: #555;
@@ -2544,10 +2475,11 @@ header .menu-toggle {
   }
   
   .concept-isola-bella {
+      font-family: 'DM Sans', sans-serif;
       background-color: #f9f9f9;
       padding: 60px 20px;
       color: #333;
-      font-family: var(--font-body);
+      font-family: 'Arial', sans-serif;
   }
   
 
@@ -2559,6 +2491,7 @@ header .menu-toggle {
   
 
   .section-title {
+      font-family: 'DM Sans', sans-serif;
       font-size: 36px;
       font-weight: bold;
       color: #2c3e50;
@@ -2568,6 +2501,7 @@ header .menu-toggle {
   
 
   .section-description {
+      font-family: 'DM Sans', sans-serif;
       font-size: 18px;
       line-height: 1.8;
       color: #555;
@@ -2599,10 +2533,11 @@ header .menu-toggle {
   }
   
   .escursioni-info-utili {
+    font-family: 'DM Sans', sans-serif;
     background-color: #f4944a;  
     padding: 60px 20px;
     color: #333;
-    font-family: var(--font-body);
+    font-family: 'Arial', sans-serif;
 }
 
 .escursioni-container {
@@ -2612,6 +2547,7 @@ header .menu-toggle {
 }
 
 .info-title {
+  font-family: 'DM Sans', sans-serif;
     font-size: 36px;
     font-weight: bold;
     color: #2c3e50;
@@ -2621,6 +2557,7 @@ header .menu-toggle {
 
 
 .info-box {
+    font-family: 'DM Sans', sans-serif;
     background-color: #fff;
     padding: 30px;
     border-radius: 10px;
@@ -2628,12 +2565,14 @@ header .menu-toggle {
 }
 
 .info-list {
+    font-family: 'DM Sans', sans-serif;
     list-style-type: none;
     padding-left: 0;
     margin: 0;
 }
 
 .info-list li {
+    font-family: 'DM Sans', sans-serif;
     font-size: 18px;
     line-height: 1.8;
     color: #2c3e50;
@@ -2642,12 +2581,14 @@ header .menu-toggle {
 }
 
 .info-list li strong {
+    font-family: 'DM Sans', sans-serif;
     font-weight: bold;
     color: #2c3e50;
 }
 
 
 .email-link {
+    font-family: 'DM Sans', sans-serif;
     color: #FFA500;
     text-decoration: none;
     font-weight: bold;
@@ -2690,6 +2631,7 @@ header .menu-toggle {
   ****** /* page info&tariffe */
 
   •⁠  ⁠{
+    font-family: 'DM Sans', sans-serif;
    }
   
   html, body {
@@ -2701,6 +2643,7 @@ header .menu-toggle {
   }
   
   .hero-info-tariffe-show {
+    font-family: 'DM Sans', sans-serif;
     position: relative;
     width: 100%;
     min-height: 70vh; 
@@ -2716,6 +2659,7 @@ header .menu-toggle {
   
 
   .hero-titolo-info-tariffe h2 {
+    font-family: 'DM Sans', sans-serif;
     position: absolute;
     top: 50%; 
     left: 0; 
@@ -2763,6 +2707,7 @@ header .menu-toggle {
   
 
   .arrivo-contenuto {
+    font-family: 'DM Sans', sans-serif;
     max-width: 1000px;
     margin: 0 auto; 
     text-align: left;
@@ -2770,17 +2715,20 @@ header .menu-toggle {
   
   
   .arrivo-section h2 {
+    font-family: 'DM Sans', sans-serif;
     font-size: 28px;
     margin-bottom: 20px;
     color: #2c3e50;
   }
   
   .arrivo-section p {
+    font-family: 'DM Sans', sans-serif;
     font-size: 18px;
     margin-bottom: 40px;
   }
   
   .arrivo-opzioni {
+    font-family: 'DM Sans', sans-serif;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
@@ -2788,6 +2736,7 @@ header .menu-toggle {
   }
   
   .arrivo-opzione {
+    font-family: 'DM Sans', sans-serif;
     background-color: #fffbfb;
     padding: 20px;
     border-radius: 8px;
@@ -2796,40 +2745,47 @@ header .menu-toggle {
   }
   
   .arrivo-opzione h3 {
+    font-family: 'DM Sans', sans-serif;
     font-size: 22px;
     margin-bottom: 10px;
     color: #8bb4b8;
   }
   
   .arrivo-opzione p {
+    font-family: 'DM Sans', sans-serif;
     font-size: 16px;
     color: #555;
   }
   
 
   .tariffe-section {
+    font-family: 'DM Sans', sans-serif;
     padding: 40px 20px;
     background-color: white;
   }
   
   .tariffe-contenuto {
+    font-family: 'DM Sans', sans-serif;
     max-width: 1000px;
     margin: 0 auto;
     text-align: left;
   }
   
   .tariffe-section h2 {
+    font-family: 'DM Sans', sans-serif;
     font-size: 28px;
     margin-bottom: 20px;
     color:  #8bb4b8;
   }
   
   .tariffe-section p {
+    font-family: 'DM Sans', sans-serif;
     font-size: 18px;
     margin-bottom: 40px;
   }
   
   .tariffe-opzioni {
+    font-family: 'DM Sans', sans-serif;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
@@ -2837,6 +2793,7 @@ header .menu-toggle {
   }
   
   .tariffe-opzione {
+    font-family: 'DM Sans', sans-serif;
     background-color: #f0f0f0;
     padding: 20px;
     border-radius: 8px;
@@ -2845,17 +2802,20 @@ header .menu-toggle {
   }
   
   .tariffe-opzione h3 {
+    font-family: 'DM Sans', sans-serif;
     font-size: 22px;
     margin-bottom: 10px;
     color: #2c3e50;
   }
   
   .tariffe-opzione p {
+    font-family: 'DM Sans', sans-serif;
     font-size: 16px;
     color: #555;
   }
   
   .tariffe-opzione strong {
+    font-family: 'DM Sans', sans-serif;
     font-weight: bold;
   }
   
@@ -2885,22 +2845,26 @@ header .menu-toggle {
   
 
   .contatti-section {
+    font-family: 'DM Sans', sans-serif;
     padding: 40px 20px;
     background-color: #b8dcdf;
   }
   
   .contatti-contenuto {
+    font-family: 'DM Sans', sans-serif;
     max-width: 1000px;
     margin: 0 auto; 
     text-align: left;
   }
   
   .contatti-section h2 {
+    font-family: 'DM Sans', sans-serif;
     font-size: 28px;
     margin-bottom: 20px;
   }
   
   .contatti-box {
+    font-family: 'DM Sans', sans-serif;
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
@@ -2910,21 +2874,25 @@ header .menu-toggle {
   }
   
   .contatti-box h3 {
+    font-family: 'DM Sans', sans-serif;
     font-size: 22px;
     margin-bottom: 15px;
   }
   
   .contatti-box p {
+    font-family: 'DM Sans', sans-serif;
     font-size: 16px;
     color: #555;
   }
   
   .contatti-box a {
+    font-family: 'DM Sans', sans-serif;
     color: #8bb4b8;
     text-decoration: none;
   }
   
   .contatti-box a:hover {
+    font-family: 'DM Sans', sans-serif;
     text-decoration: underline;
   }
   
@@ -3036,17 +3004,19 @@ header .menu-toggle {
   }
 
   •⁠  ⁠{
+    font-family: 'DM Sans', sans-serif;
    }
   
   body {
     margin: 0;
-    font-family: var(--font-body);
+    font-family: Arial, sans-serif;
     color: #333;
     background-color: #f4f4f4;
   }
   
 
   .fauna-header {
+    font-family: 'DM Sans', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -3060,6 +3030,7 @@ header .menu-toggle {
   }
   
   .fauna-nav a {
+    font-family: 'DM Sans', sans-serif;
     color: white;
     text-decoration: none;
     padding: 10px 15px;
@@ -3067,11 +3038,13 @@ header .menu-toggle {
   }
   
   .fauna-nav a:hover {
+    font-family: 'DM Sans', sans-serif;
     background-color: #1f6e42;
   }
   
 
   .fauna-main {
+    font-family: 'DM Sans', sans-serif;
     padding: 50px 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -3079,6 +3052,7 @@ header .menu-toggle {
   
  
   .fauna-sezione-introduzione {
+    font-family: 'DM Sans', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -3088,6 +3062,7 @@ header .menu-toggle {
   
 
   .fauna-titolo-introduzione h1 {
+    font-family: 'DM Sans', sans-serif;
     font-size: 36px;
     margin: 0;
     text-align: left; 
@@ -3101,10 +3076,12 @@ header .menu-toggle {
 
   
   .fauna-paragrafo-introduzione {
+    font-family: 'DM Sans', sans-serif;
     max-width: 50%; 
   }
   
   .fauna-paragrafo-introduzione p {
+    font-family: 'DM Sans', sans-serif;
     font-size: 18px;
     color: #555;
     line-height: 1.8;
@@ -3121,6 +3098,7 @@ header .menu-toggle {
   
   
   .fauna-sezione-specie {
+    font-family: 'DM Sans', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -3130,6 +3108,7 @@ header .menu-toggle {
   }
   
   .fauna-card-specie {
+    font-family: 'DM Sans', sans-serif;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     padding: 15px;
@@ -3193,17 +3172,20 @@ header .menu-toggle {
   }
   
   .fauna-sezione-avvertenze h2 {
+    font-family: 'DM Sans', sans-serif;
     font-size: 24px;
     margin-bottom: 15px;
   }
   
   .fauna-sezione-avvertenze p {
+    font-family: 'DM Sans', sans-serif;
     font-size: 16px;
     color: #555;
   }
   
 
   .fauna-collegamenti {
+    font-family: 'DM Sans', sans-serif;
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -3211,6 +3193,7 @@ header .menu-toggle {
   }
   
   .fauna-collegamento {
+    font-family: 'DM Sans', sans-serif;
     background-color: #2e8b57;
     color: white;
     padding: 12px 25px;
@@ -3326,9 +3309,11 @@ header .menu-toggle {
   *****
 
   •⁠  ⁠{
+    font-family: 'DM Sans', sans-serif;
    }
   
   .hero-emergenze {
+    font-family: 'DM Sans', sans-serif;
     background-color: #4db8b0; 
     padding: 120px 20px; 
     text-align: left;
@@ -3337,6 +3322,7 @@ header .menu-toggle {
   }
   
   .contenuto-hero {
+    font-family: 'DM Sans', sans-serif;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -3344,11 +3330,13 @@ header .menu-toggle {
   }
   
   .testo-hero {
+    font-family: 'DM Sans', sans-serif;
     padding: 20px;
     max-width: 800px; 
   }
   
   .testo-hero h1 {
+    font-family: 'DM Sans', sans-serif;
     font-size: 60px; 
     font-weight: bold;
     margin-bottom: 20px;
@@ -3357,6 +3345,7 @@ header .menu-toggle {
   }
   
   .testo-hero p {
+    font-family: 'DM Sans', sans-serif;
     font-size: 22px;
     line-height: 1.6;
     color: white;
@@ -3364,6 +3353,7 @@ header .menu-toggle {
   
  
   .introduzione-emergenze {
+    font-family: 'DM Sans', sans-serif;
     background-color: #f1f1f1; 
     padding: 50px 20px;
     color: #333;
@@ -3375,6 +3365,7 @@ header .menu-toggle {
   }
   
   .introduzione-emergenze h2 {
+    font-family: 'DM Sans', sans-serif;
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -3382,6 +3373,7 @@ header .menu-toggle {
   }
   
   .introduzione-contenuto {
+    font-family: 'DM Sans', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -3389,6 +3381,7 @@ header .menu-toggle {
   }
   
   .introduzione-contenuto p {
+    font-family: 'DM Sans', sans-serif;
     font-size: 18px;
     line-height: 1.8;
     color: #555;
@@ -3415,6 +3408,7 @@ header .menu-toggle {
   }
   
   .principali-emergenze h2 {
+    font-family: 'DM Sans', sans-serif;
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -3439,6 +3433,7 @@ header .menu-toggle {
   }
   
   .emergenza-item h3 {
+    font-family: 'DM Sans', sans-serif;
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 15px;
@@ -3446,6 +3441,7 @@ header .menu-toggle {
   }
   
   .emergenza-item p {
+    font-family: 'DM Sans', sans-serif;
     font-size: 16px;
     line-height: 1.6;
     color: #666;
@@ -3458,6 +3454,7 @@ header .menu-toggle {
   }
   
   .introduzione-emergenze {
+    font-family: 'DM Sans', sans-serif;
     padding: 50px 20px;
     margin-top: 120px; 
     color: #333;
@@ -3481,6 +3478,7 @@ header .menu-toggle {
   
   
   .navigazione-flora-fauna {
+    font-family: 'DM Sans', sans-serif;
     padding: 40px;
     background-color: #eaf7ff;
     border-radius: 10px;
@@ -3490,6 +3488,7 @@ header .menu-toggle {
   }
  
   .contenuto-navigazione {
+    font-family: 'DM Sans', sans-serif;
     display: flex;
     justify-content: center;
     gap: 40px;
@@ -3498,6 +3497,7 @@ header .menu-toggle {
   
  
   .collegamento {
+    font-family: 'DM Sans', sans-serif;
     background-color: #0056b3; 
     color: white;
     font-size: 18px;
@@ -3545,9 +3545,11 @@ header .menu-toggle {
   ****** /* Termini e condizioni / Policy della privacy*/
   
   •⁠  ⁠{
+    font-family: 'DM Sans', sans-serif;
    }
 
   #header-termini {
+    font-family: 'DM Sans', sans-serif;
     background-color: #114e62; 
     padding: 30px 0;
     color: white;
@@ -3555,6 +3557,7 @@ header .menu-toggle {
   }
   
   #header-termini h1 {
+    font-family: 'DM Sans', sans-serif;
     margin: 0;
     font-size: 36px;
   }
@@ -3566,6 +3569,7 @@ header .menu-toggle {
   
 
   .section-termini {
+    font-family: 'DM Sans', sans-serif;
     margin-bottom: 40px;
     background-color: #ffffff;
     padding: 20px;
@@ -3574,22 +3578,26 @@ header .menu-toggle {
   }
   
   .title-termini {
+    font-family: 'DM Sans', sans-serif;
     font-size: 24px;
     color: #114e62; 
     margin-bottom: 10px;
   }
   
   .section-termini p {
+    font-family: 'DM Sans', sans-serif;
     font-size: 16px;
     color: #555;
   }
   
   .section-termini ul {
+    font-family: 'DM Sans', sans-serif;
     padding-left: 20px;
     list-style-type: disc;
   }
   
   .section-termini a {
+    font-family: 'DM Sans', sans-serif;
     color: #27ae60;
     text-decoration: none;
   }
@@ -3600,6 +3608,7 @@ header .menu-toggle {
   
 
   #footer-termini {
+    font-family: 'DM Sans', sans-serif;
     background-color: #114e62;
     color: white;
     padding: 20px 0;
@@ -3607,6 +3616,7 @@ header .menu-toggle {
   }
   
   #footer-termini p {
+    font-family: 'DM Sans', sans-serif;
     margin: 0;
     font-size: 14px;
     color: white;
@@ -3706,9 +3716,11 @@ header .menu-toggle {
   ***
   
   •⁠  ⁠{
+    font-family: 'DM Sans', sans-serif;
    }
  
   #header-privacy {
+    font-family: 'DM Sans', sans-serif;
     background-color: #114e62; 
     padding: 30px 0;
     color: white;
@@ -3716,6 +3728,7 @@ header .menu-toggle {
   }
   
   #header-privacy h1 {
+    font-family: 'DM Sans', sans-serif;
     margin: 0;
     font-size: 36px;
   }
@@ -3726,6 +3739,7 @@ header .menu-toggle {
   }
   
   .section-privacy {
+    font-family: 'DM Sans', sans-serif;
     margin-bottom: 40px;
     background-color: #ffffff;
     padding: 20px;
@@ -3734,28 +3748,33 @@ header .menu-toggle {
   }
   
   .section-privacy h2 {
+    font-family: 'DM Sans', sans-serif;
     font-size: 24px;
     color: #114e62; 
     margin-bottom: 10px;
   }
   
   .title-privacy {
+    font-family: 'DM Sans', sans-serif;
     font-size: 24px;
     color: #114e62; 
     margin-bottom: 10px;
   }
   
   .section-privacy p {
+    font-family: 'DM Sans', sans-serif;
     font-size: 16px;
     color: #555;
   }
   
   .section-privacy ul {
+    font-family: 'DM Sans', sans-serif;
     padding-left: 20px;
     list-style-type: disc;
   }
   
   .section-privacy a {
+    font-family: 'DM Sans', sans-serif;
     color: #27ae60; 
     text-decoration: none;
   }
@@ -3766,6 +3785,7 @@ header .menu-toggle {
   
 
   #footer-privacy {
+    font-family: 'DM Sans', sans-serif;
     background-color: #114e62;
     color: white;
     padding: 20px 0;
@@ -3773,6 +3793,7 @@ header .menu-toggle {
   }
   
   #footer-privacy p {
+    font-family: 'DM Sans', sans-serif;
     margin: 0;
     font-size: 14px;
     color: white;

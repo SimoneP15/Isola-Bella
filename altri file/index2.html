@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isola Bella - Riserva Naturale della Sicilia</title>
     <link rel="stylesheet" href="stile.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -13,7 +13,7 @@
 
   <header id="header_universale">
     <div class="logo">
-      <a href="index.html"><img src="marchio.jpg" alt="Logo Isola Bella"></a>
+      <img src="marchio.jpg" alt="Logo Isola Bella">
     </div>
   
 
@@ -36,12 +36,11 @@
 
 <main class="pagina-storica">
 
-<section class="hero-universale">
-  <img src="ParcoArcheoNaxosTaormina_0080-1920x1280.png" alt="Museo Naturalistico" class="hero-universale-img">
-  <div class="hero-universale-content">
-    <h1>Museo Naturalistico</h1>
-  </div>
-</section>
+<div class="hero-museo-show">
+  <section class="hero-titolo-museo">
+  <h2>Museo Naturalistico</h2>
+  </section>
+</div>
    
   <section id="isola-bella-sezione" class="isola-bella-sezione">
           <div class="isola-bella-container">
@@ -61,12 +60,31 @@
           </section>
  
 
-</div>
+        <div class="isola-bella-image-grid">
+          <div class="isola-bella-image-item" data-aos="fade-up">
+            <img src="img museo 1.jpg" alt="Fauna dell'Isola Bella" class="isola-bella-image" onclick="openImage(this)">
+          </div>
+        
+          <div class="isola-bella-image-item" data-aos="fade-up" data-aos-delay="100">
+            <img src="img museo 2 copia.JPG" alt="Flora dell'Isola Bella" class="isola-bella-image" onclick="openImage(this)">
+          </div>
+        
+          <div class="isola-bella-image-item" data-aos="fade-up" data-aos-delay="200">
+            <img src="img museo 3.jpg" alt="Vista dell'Isola Bella" class="isola-bella-image" onclick="openImage(this)" width="100%">
+          </div>
+        </div>
+      </div>
 
 <div id="isola-bella-lightbox" class="isola-bella-lightbox" onclick="closeImage()">
   <img id="isola-bella-lightbox-image" src="" alt="Immagine ingrandita">
 </div>
 
+
+
+<section>
+
+  <div class="divisore-arancio"></div>
+</section>
 
 <section id="museo-storia" class="museo-storia">
   <div class="contenitore-storia">
@@ -197,7 +215,7 @@
 <section id="informazioni-utili" class="informazioni-utili">
   <div class="contenitore-informazioni">
       <h3>Informazioni Utili</h3>
-      <p><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#5c352f33303d3e3930303d7231292f39331c3b313d3530723528"><span class="__cf_email__" data-cfemail="c0a9b3afaca1a2a5acaca1eeadb5b3a5af80a7ada1a9aceea9b4">[email&#160;protected]</span></a></p>
+      <p><strong>Email:</strong> <a href="mailto:isolabella.museo@gmail.it">isolabella.museo@gmail.it</a></p>
       <p><strong>Telefono:</strong> 0957952356</p>
       <p><strong>Cellulare:</strong> +39 3485672329</p>
       <p><strong>Indirizzo:</strong> Via Nazionale, Isola Bella, 98039 Taormina (ME), Italia</p>
@@ -230,7 +248,7 @@
   
       <div class="footer-contact">
           <h4>Contattaci</h4>
-          <p><a href="/cdn-cgi/l/email-protection#95fcfbf3fad5fce6faf9f4f7f0f9f9f4bbf6faf8"><span class="__cf_email__" data-cfemail="523b3c343d123b213d3e3330373e3e337c313d3f">[email&#160;protected]</span></a></p>
+          <p><a href="mailto:info@isolabella.com">info@isolabella.com</a></p>
           <p>+39 0942 628738</p>
           <p>Via Nazionale - Strada Statale 114, Isola Bella, Taormina, Italia</p>
       </div>
@@ -276,7 +294,11 @@
 </script>
 </section>
 
-
+<script>
+    window.addEventListener('load', function() {
+   document.querySelector('.hero-museo-show').classList.add('show');
+   });
+</script>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
         <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
@@ -308,3 +330,24 @@
    const closeBtn = document.querySelector('.close');
  
   
+   immagini.forEach(img => {
+     img.addEventListener('click', function (e) {
+       modal.style.display = "flex";  
+       modalContent.src = e.target.src;  
+     });
+   });
+ 
+   closeBtn.addEventListener('click', () => {
+     modal.style.display = "none";  
+   });
+
+   window.addEventListener('click', (e) => {
+     if (e.target === modal) {
+       modal.style.display = "none";  
+     }
+   });
+ </script>
+        
+   
+</body>
+</html>

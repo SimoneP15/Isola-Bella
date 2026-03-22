@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isola Bella - Riserva Naturale della Sicilia</title>
     <link rel="stylesheet" href="stile.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 
   <header id="header_universale">
     <div class="logo">
-      <a href="index.html"><img src="marchio.jpg" alt="Logo Isola Bella"></a>
+      <img src="marchio.jpg" alt="Logo Isola Bella">
     </div>
   
 
@@ -35,13 +35,14 @@
      
 <main>
     
-<section class="hero-universale">
-  <img src="completa.jpg" alt="Escursioni Isola Bella" class="hero-universale-img">
-  <div class="hero-universale-content">
-    <h1>Escursioni</h1>
-  </div>
-</section>
+    <div class="hero-escursioni-show">
+        <section class="hero-titolo-escursioni">
+          <h2>Escursioni</h2>
+        </section>
+      </div>
 
+
+        <div class="divisore-tours"></div>
 
 <section id="percorsi-escursioni" class="escursioni-percorsi">
     <div class="escursioni-container">
@@ -97,7 +98,7 @@
         <ul class="info-list">
           <li><strong>Orari escursioni:</strong> dalle 08:30 alle 20:00</li>
           <li><strong>Attrezzatura consigliata:</strong> crema solare, acqua, pranzo a sacco e una buona dose di energia.</li>
-          <li><strong>Per ulteriori informazioni contattare:</strong> <a href="/cdn-cgi/l/email-protection#0a637965666b686f66666b246f79697f7879636564634a6d676b636624637e" class="email-link"><span class="__cf_email__" data-cfemail="85ecf6eae9e4e7e0e9e9e4abe0f6e6f0f7f6eceaebecc5e2e8e4ece9abecf1">[email&#160;protected]</span></a></li>
+          <li><strong>Per ulteriori informazioni contattare:</strong> <a href="mailto:isolabella.escursioni@gmail.it" class="email-link">isolabella.escursioni@gmail.it</a></li>
           <li><strong>Cellulare:</strong> +39 3456789023</li>
           <li><strong>Guide disponibili su prenotazione.</strong></li>
         </ul>
@@ -129,7 +130,7 @@
   
       <div class="footer-contact">
           <h4>Contattaci</h4>
-          <p><a href="/cdn-cgi/l/email-protection#ddb4b3bbb29db4aeb2b1bcbfb8b1b1bcf3beb2b0"><span class="__cf_email__" data-cfemail="573e393138173e24383b3635323b3b367934383a">[email&#160;protected]</span></a></p>
+          <p><a href="mailto:info@isolabella.com">info@isolabella.com</a></p>
           <p>+39 0942 628738</p>
           <p>Via Nazionale - Strada Statale 114, Isola Bella, Taormina, Italia</p>
       </div>
@@ -141,14 +142,22 @@
       <p><a href="index10.html">Privacy Policy</a> | <a href="index9.html">Termini e Condizioni</a></p>
   </div>
 </footer>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const nav = document.querySelector("header nav");
-    menuToggle.addEventListener("click", function() {
-        nav.classList.toggle("active");
+
+<script>document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('header nav'); 
+
+    menuToggle.addEventListener('click', function() {
+        nav.classList.toggle('active'); 
     });
-});
+});</script>
+
+<script>
+    window.addEventListener('load', function() {
+   document.querySelector('.hero-escursioni-show').classList.add('show');
+   });
 </script>
+
+
 </body>
 </html>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isola Bella - Riserva Naturale della Sicilia</title>
     <link rel="stylesheet" href="stile.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -13,7 +13,7 @@
 
     <header id="header_universale">
         <div class="logo">
-          <a href="index.html"><img src="marchio.jpg" alt="Logo Isola Bella"></a>
+          <img src="marchio.jpg" alt="Logo Isola Bella">
         </div>
       
     
@@ -37,12 +37,11 @@
 
 <main>
 
-<section class="hero-universale">
-  <img src="copertina riserva.jpg" alt="Riserva Isola Bella" class="hero-universale-img">
-  <div class="hero-universale-content">
-    <h1>Riserva Naturale</h1>
-  </div>
-</section>
+    <section id="hero-riserva" class="hero-riserva">
+        <div class="hero-image">
+            <img src="copertina riserva.jpg" alt="Riserva Isola Bella" />
+        </div>
+    </section>
 
 <section id="riserva-sezione" class="riserva-sezione">
     <div class="riserva-container">
@@ -73,6 +72,38 @@
 
 
  
+  <div class="divisore-riserva"></div>
+
+  <section id="galleria-foto" class="escursioni-galleria">
+    <div class="escursioni-container">
+        <h2>Galleria</h2>
+        <div class="galleria">
+            <div class="galleria-item">
+                <img src="img riserva.jpg" alt="Isola Bella" class="galleria-immagine" id="img1">
+            </div>
+            <div class="galleria-item">
+                <img src="img riserva2.jpg" alt="Isola Bella" class="galleria-immagine" id="img2">
+            </div>
+            <div class="galleria-item">
+                <img src="img riserva3.jpg" alt="Isola Bella" class="galleria-immagine" id="img3">
+            </div>
+            <div class="galleria-item">
+                <img src="img riserva4.jpg" alt="Isola Bella" class="galleria-immagine" id="img4">
+            </div>
+            <div class="galleria-item">
+                <img src="img riserva6.jpg" alt="Isola Bella" class="galleria-immagine" id="img6">
+            </div>
+            <div class="galleria-item">
+                <img src="img riserva7.jpg" alt="Isola Bella" class="galleria-immagine" id="img7">
+            </div>
+            <div class="galleria-item">
+                <img src="img riserva8.jpeg" alt="Isola Bella" class="galleria-immagine" id="img8">
+            </div>
+            <div class="galleria-item">
+                <img src="img riserva9.jpg" alt="Isola Bella" class="galleria-immagine" id="img9">
+            </div>
+        </div>
+    </div>
 
 
 <div class="divisore-verde"></div>
@@ -141,7 +172,7 @@
     
         <div class="footer-contact">
             <h4>Contattaci</h4>
-            <p><a href="/cdn-cgi/l/email-protection#b9d0d7dfd6f9d0cad6d5d8dbdcd5d5d897dad6d4"><span class="__cf_email__" data-cfemail="fc95929a93bc958f93909d9e9990909dd29f9391">[email&#160;protected]</span></a></p>
+            <p><a href="mailto:info@isolabella.com">info@isolabella.com</a></p>
             <p>+39 0942 628738</p>
             <p>Via Nazionale - Strada Statale 114, Isola Bella, Taormina, Italia</p>
         </div>
@@ -165,6 +196,30 @@
     });
 });</script>
 
+
+ <div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modal-img">
+</div>
+</section>
+
+<script>
+const images = document.querySelectorAll('.galleria-immagine');
+const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modal-img');
+
+images.forEach(image => {
+image.addEventListener('click', function() {
+    modal.style.display = 'flex';  
+    modalImg.src = this.src; 
+});
+});
+
+
+function closeModal() {
+modal.style.display = 'none';  
+}
+</script>
 
 </body>
 </html>
